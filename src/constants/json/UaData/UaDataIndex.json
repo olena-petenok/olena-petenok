@@ -1,0 +1,64 @@
+[
+  {
+    "id": "1",
+    "title": "Що таке WEB розробка?",
+    "blocks": [
+      {"id": "1", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "../images/index/services/1.svg", "alt": "image", "title": "Створення сайтів з нуля", "text": ""},
+      {"id": "2", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "../images/index/services/2.svg", "alt": "image", "title": "Підтримка створених сайтів", "text": ""},
+      {"id": "3", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "../images/index/services/3.svg", "alt": "image", "title": "Додавання нового контенту", "text": ""},
+      {"id": "4", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "../images/index/services/4.svg", "alt": "image", "title": "Оптимізація та редизайн", "text": ""}
+    ]
+  },{
+    "id": "2",
+    "title": "Високоякісний веб-сайт має наступне:",
+    "blocks": [
+      {
+        "id": "1",
+        "ukWidth": "1-1 uk-width-1-2@m",
+        "src": "../images/index/high-quality-website/1.svg",
+        "alt": "image",
+        "title": "Хороша оптимізація",
+        "text": [ { "id": "1", "value": "Висока швидкість завантаження сторінки"},
+                { "id": "2", "value": "Чистий і читабельний код"},
+                { "id": "3", "value": "Оптимізована організація контенту"},
+                { "id": "4", "value": "Зручна система посилань"},
+                { "id": "5", "value": "Безпека контенту та користувачів"}
+              ]
+      }, {
+        "id": "2",
+        "ukWidth": "1-1 uk-width-1-2@m",
+        "src": "../images/index/high-quality-website/2.svg",
+        "alt": "image",
+        "title": "Зручний і красивий дизайн",
+        "text": [ { "id": "1", "value": "Унікальний дизайн"},
+                { "id": "2", "value": "Інтуїтивно зрозумілий інтерфейс"},
+                { "id": "3", "value": "Читабельність тексту"},
+                { "id": "4", "value": "Єдиний стиль дизайну"},
+                { "id": "5", "value": "Адаптивність контенту для різних екранів"}
+              ]
+      }
+    ]
+  },{
+    "id": "3",
+    "title": "Типи сайтів",
+    "blocks": [
+      {"id": "1", "ukWidth": "1-1 uk-width-1-2@m uk-width-1-3@l", "src": "../images/index/types-of-websites/1.svg", "alt": "image", "title": "Онлайн візитна картка", "text": "Невеликий сайт, який зазвичай складається з однієї або декількох веб-сторінок і базової інформації про організацію, приватну особу, компанію, товари або послуги, прайс-листи, контактну інформацію."},
+      {"id": "2", "ukWidth": "1-1 uk-width-1-2@m uk-width-1-3@l", "src": "../images/index/types-of-websites/2.svg", "alt": "image", "title": "Корпоративний сайт", "text": "Містить повну інформацію про компанію, послуги, продукти, події в житті компанії, часто містить різні функціональні інструменти для роботи з контентом (пошук і фільтри, новини, галереї, корпоративні блоги)."},
+      {"id": "3", "ukWidth": "1-1 uk-width-1-2@m uk-width-1-3@l", "src": "../images/index/types-of-websites/3.svg", "alt": "image", "title": "Промо сайт", "text": "Повинен бути рекламним буклетом і привертати увагу покупців. Це невеликий сайт, зазвичай односторінковий, що містить інформацію про компанію, напрямок діяльності, контактну інформацію, акції, новини."},
+      {"id": "4", "ukWidth": "1-1 uk-width-1-2@m uk-width-1-3@l", "src": "../images/index/types-of-websites/4.svg", "alt": "image", "title": "Блог", "text": "Основний контент - регулярно додавані записи, що містять текст, зображення або мультимедіа з можливістю публікації відгуків (коментарів) відвідувачів."},
+      {"id": "5", "ukWidth": "1-1 uk-width-1-2@m uk-width-1-3@l", "src": "../images/index/types-of-websites/5.svg", "alt": "image", "title": "Галерея", "text": "Надає можливість перегляду різного мультимедійного і текстового контенту (списки, блоки, слайдери, зазвичай - з посиланнями на докладні версії)."},
+      {"id": "6", "ukWidth": "1-1 uk-width-1-2@m uk-width-1-3@l", "src": "../images/index/types-of-websites/6.svg", "alt": "image", "title": "Інтернет магазин", "text": "Мета в торгівлі через Інтернет. Дозволяє користувачам переглядати асортимент товарів і послуг компанії з зображеннями, цінами, інформацією про технічні характеристики, використовувати різні зручні фільтри, створювати замовлення на покупку, обирати способи оплати та доставки замовлення, оплачувати замовлення."}
+    ]
+  },{
+    "id": "4",
+    "title": "Про що думає клієнт, перш ніж замовити?",
+    "blocks": [
+      {"id": "1", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "../images/index/before-ordering/1.svg", "alt": "image", "title": "Навіщо мені потрібен веб-сайт?", "text": ""},
+      {"id": "2", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "../images/index/before-ordering/2.svg", "alt": "image", "title": "Що саме я хочу опублікувати?", "text": ""},
+      {"id": "3", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "../images/index/before-ordering/3.svg", "alt": "image", "title": "Які сторінки мені потрібні?", "text": ""},
+      {"id": "4", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "../images/index/before-ordering/4.svg", "alt": "image", "title": "Чи потрібен мені зворотній зв\"язок від клієнтів?", "text": ""},
+      {"id": "5", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "../images/index/before-ordering/5.svg", "alt": "image", "title": "В якому кольорі (кольорах) мені потрібен сайт?", "text": ""},
+      {"id": "6", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "../images/index/before-ordering/6.svg", "alt": "image", "title": "Де я планую розмістити сайт?", "text": ""}
+    ]
+  }
+]

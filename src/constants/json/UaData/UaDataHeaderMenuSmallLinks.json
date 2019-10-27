@@ -1,0 +1,8 @@
+[
+  {"id": "1", "icon": "icon: home; ratio: 1.2", "value": "Головна", "href": "/ua", "external": ""},
+  {"id": "2", "icon": "icon: user; ratio: 1.2", "value": "Про автора", "href": "/ua/about-author", "external": ""},
+  {"id": "3", "icon": "icon: linkedin; ratio: 1.2", "value": "Linkedin", "href": "https://www.linkedin.com/in/olena-petenok/", "external": "1"},
+  {"id": "4", "icon": "icon: facebook; ratio: 1.2", "value": "Facebook", "href": "https://www.facebook.com/profile.php?id=100017169853628", "external": "1"},
+  {"id": "5", "icon": "icon: receiver; ratio: 1.2", "value": "+38 (063) 656 6772", "href": "", "external": ""},
+  {"id": "6", "icon": "icon: google; ratio: 1.2", "value": "olena.petenok.work@gmail.com", "href": "", "external": ""}
+]
