@@ -12,18 +12,6 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "babel-eslint": "^10.0.3",
-    "copy-webpack-plugin": "^5.0.4",
-    "file-loader": "^4.2.0",
-    "html-webpack-plugin": "^3.2.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-hot-loader": "^4.12.15",
-    "webpack": "^4.41.2",
-    "webpack-merge": "^4.2.2"
-  },
   "devDependencies": {
     "@babel/core": "^7.6.3",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
@@ -48,5 +36,18 @@
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.9.0",
     "webpack-visualizer-plugin": "^0.1.11"
+  },
+  "dependencies": {
+    "babel-eslint": "^10.0.3",
+    "copy-webpack-plugin": "^5.0.4",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-hot-loader": "^4.12.15",
+    "webpack": "^4.41.2",
+    "webpack-merge": "^4.2.2",
+    "uikit": "^3.2.0"
   }
 }

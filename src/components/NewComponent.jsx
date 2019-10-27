@@ -17,7 +17,7 @@ class NewComponent extends React.Component {
     // const {  } = this.state;
 
     return (
-      <section className="">
+      <section className="services">
         NewComponent
       </section>
     );

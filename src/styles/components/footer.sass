@@ -1,0 +1,30 @@
+@import '../constants/styles/colors.sass'
+@import '../constants/styles/media-data.sass'
+
+footer
+  &.footer-background
+    background-color: $footer-background-color
+    padding-top: 60px
+    padding-bottom: 65px
+    @media ($media-max-width: $media-medium-screen)
+      padding-top: 40px
+      padding-bottom: 45px
+    @media ($media-max-width: $media-small-screen)
+      padding-top: 20px
+      padding-bottom: 25px
+
+  .footer-menu-copyright-block
+    @media ($media-max-width: $media-small-screen)
+      padding-top: 20px
+
+  .footer-item
+    text-align: center
+    padding-top: 8px
+    &.copyright
+      padding-top: 40px
+      @media ($media-max-width: $media-small-screen)
+        padding-top: 30px
+    @media ($media-max-width: $media-medium-screen)
+      font-size: 15px
+    .icon
+      padding-right: 3px

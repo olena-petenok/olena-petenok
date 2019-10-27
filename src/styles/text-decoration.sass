@@ -1,0 +1,32 @@
+@import '../constants/styles/colors.sass'
+
+.text-item-colors-underline
+  color: $main-text-color
+  &.active
+    .text-item-colors-underline-link
+      color: $accent-text-color
+  .text-item-colors-underline-link
+    text-decoration: none
+    position: relative
+    color: $main-text-color
+    &:active
+      color: $hover-text-color
+    &:hover
+      color: $hover-text-color
+      &:before
+        width: 100%
+        left: 0
+        background: $hover-text-color
+    &:before
+      content: ""
+      width: 0
+      height: 0.05em
+      position: absolute
+      bottom: -3px
+      left: 50%
+      background: $main-text-color
+      -webkit-transition: all 0.3s
+      -moz-transition:    all 0.3s
+      -ms-transition:     all 0.3s
+      -o-transition:      all 0.3s
+      transition:         all 0.3s

@@ -1,1 +1,1 @@
-# Empty React application (classes)
+# Personal CV website

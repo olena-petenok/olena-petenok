@@ -1,0 +1,98 @@
+@import '../constants/styles/colors.sass'
+@import '../constants/styles/media-data.sass'
+
+.about-author
+  .portrait-image-block
+    padding-top: 70px
+    margin-top: 10px
+    &:hover
+      margin-top: 0px
+      margin-bottom: 10px
+    @media ($media-max-width: $media-medium-screen)
+      padding-top: 40px
+    @media ($media-max-width: $media-small-screen)
+      padding-top: 20px
+
+    .portrait-image
+      -webkit-border-radius: 50%
+      -moz-border-radius:    50%
+      -ms-border-radius:     50%
+      border-radius:         50%
+
+    .portrait-image-shadow
+      position: relative
+      &:before
+        content: ''
+        -webkit-border-radius: 50%
+        -moz-border-radius:    50%
+        -ms-border-radius:     50%
+        border-radius:         50%
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: $white-shadow-color
+        z-index: 1
+        -webkit-transition: all 0.3s
+        -moz-transition:    all 0.3s
+        -ms-transition:     all 0.3s
+        -o-transition:      all 0.3s
+        transition:         all 0.3s
+      &:hover
+        -webkit-border-radius: 50%
+        -moz-border-radius:    50%
+        -ms-border-radius:     50%
+        border-radius:         50%
+        -webkit-box-shadow: 2px 8px 30px $block-shadow-color-hover-portrait
+        -moz-box-shadow:    2px 8px 30px $block-shadow-color-hover-portrait
+        box-shadow:         2px 8px 30px $block-shadow-color-hover-portrait
+        &:before
+          background-color: $white-shadow-color-light
+
+  .double-text-block
+    text-align: center
+    .text-block
+      padding: 20px
+      margin-top: 40px
+      -webkit-border-radius: 3px
+      -moz-border-radius:    3px
+      -ms-border-radius:     3px
+      border-radius:         3px
+      @media ($media-max-width: $media-small-screen)
+        margin-top: 20px
+        &:hover
+          margin-top: 13px
+          margin-bottom: 7px
+      @media ($media-max-width: $media-medium-screen)
+        margin-top: 30px
+        &:hover
+          margin-top: 20px
+          margin-bottom: 10px
+      &:hover
+        margin-top: 30px
+        margin-bottom: 10px
+
+    .title-text
+      font-size: 36px
+      margin-top: 80px
+      margin-bottom: 0px
+      @media ($media-max-width: $media-large-screen)
+        font-size: 32px
+      @media ($media-max-width: $media-medium-screen)
+        margin-top: 50px
+        font-size: 28px
+      @media ($media-max-width: $media-small-screen)
+        margin-top: 30px
+        font-size: 26px
+
+    .text-block
+      .subtitle-text
+        font-weight: bold
+        font-size: 18px
+      .main-text
+        &.without-margin
+          margin-top: -20px
+        p
+          &:first-of-type
+            padding-top: 7px

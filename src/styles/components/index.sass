@@ -1,0 +1,65 @@
+@import '../constants/styles/colors.sass'
+@import '../constants/styles/media-data.sass'
+
+.services
+  text-align: center
+  color: $main-text-color
+
+  .services-block
+    padding: 30px
+    margin-top: 50px
+    border: 1px
+    border-style: solid
+    border-color: $white-shadow-color
+    -webkit-border-radius: 3px
+    -moz-border-radius:    3px
+    -ms-border-radius:     3px
+    border-radius:         3px
+    &:hover
+      margin-top: 40px
+      margin-bottom: 10px
+    @media ($media-max-width: $media-large-screen)
+      margin-top: 35px
+      padding: 25px
+      &:hover
+        margin-top: 25px
+        margin-bottom: 10px
+    @media ($media-max-width: $media-medium-screen)
+      margin-top: 30px
+      padding: 20px
+      &:hover
+        margin-top: 20px
+        margin-bottom: 10px
+    @media ($media-max-width: $media-small-screen)
+      margin-top: 25px
+      padding: 15px
+      &:hover
+        margin-top: 15px
+        margin-bottom: 10px
+
+  .block-title
+    font-size: 36px
+    color: $main-text-color
+    margin-top: 80px
+    margin-bottom: 0px
+    @media ($media-max-width: $media-large-screen)
+      font-size: 32px
+    @media ($media-max-width: $media-medium-screen)
+      margin-top: 50px
+      font-size: 28px
+    @media ($media-max-width: $media-small-screen)
+      margin-top: 30px
+      font-size: 26px
+
+  .element-round-image
+    padding-top: 10px
+    min-height: 100px
+    min-width: 100px
+    max-width: 200px
+    max-height: 200px
+
+  .element-title
+    padding-top: 20px
+    padding-bottom: 10px
+    font-weight: bold
+    font-size: 18px

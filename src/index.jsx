@@ -1,4 +1,9 @@
-import './styles.scss';
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+UIkit.use(Icons); // loads the Icon plugin
+// import '../node_modules/uikit/dist/css/uikit.min.css';
+
+import './styles/style.sass';
 
 import React from 'react';
 import { render } from 'react-dom';
