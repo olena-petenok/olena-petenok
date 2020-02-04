@@ -16,9 +16,7 @@ function FooterCopyright(props) {
 }
 
 function FooterMenuAndCopyright(props) {
-  const links = props.links.map((item) =>
-    <FooterMenuLink key={item.id} href={item.href} value={item.value} />
-  );
+  const links = props.links.map((item) => <FooterMenuLink key={item.id} href={item.href} value={item.value} /> );
 
   return (
     <ul className="footer-menu-copyright-block">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
 import './header.sass';
@@ -43,11 +43,7 @@ function HeaderMenu(props) {
 }
 
 function HeaderLogoLink(props) {
-  return (
-    <li id={props.id}>
-      <Link to={props.href} className="logo-link">{props.value}</Link>
-    </li>
-  );
+  return ( <li id={props.id}><Link to={props.href} className="logo-link">{props.value}</Link></li> );
 }
 
 function HeaderLogo(props) {
@@ -120,15 +116,11 @@ function HeaderMenuSmallItems(props) {
   );
 }
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { opened: false };
-    this.onIconClick = this.onIconClick.bind(this);
-  };
+function Header(props) {
+  const [opened, setOpened] = useState(false);
 
-  onIconClick() {
-    if (this.state.opened) {
+  const onIconClicked = () => {
+    if (opened) {
       document.querySelector(`.mobile-menu-container`).classList.remove("shown");
       document.querySelector(`.mobile-menu-container-inner`).classList.remove("shown");
       document.querySelector(`.menu-icon`).classList.remove("clicked");
@@ -137,26 +129,23 @@ class Header extends React.Component {
       document.querySelector(`.mobile-menu-container-inner`).classList.add("shown");
       document.querySelector(`.menu-icon`).classList.add("clicked");
     }
-
-    this.setState(previousState => ({ opened: !previousState.opened }) );
+    setOpened(previousOpened => !previousOpened);
   };
 
-  render() {
-    return (
-      <header className="header-background">
-        <div className="uk-container">
-          <div className="header-align">
-            <HeaderLogo links={this.props.logo} />
-            <HeaderMenu links={this.props.links} languages={this.props.languages} activeLanguageId={this.props.activeLanguageId} activeId={this.props.activeId} />
-            <HeaderMenuSmallItems links={this.props.linksSmall} languages={this.props.languages} activeLanguageId={this.props.activeLanguageId} activeId={this.props.activeId} />
-            <div className="menu-icon-container">
-              <div className="menu-icon" onClick={this.onIconClick}></div>
-            </div>
+  return (
+    <header className="header-background">
+      <div className="uk-container">
+        <div className="header-align">
+          <HeaderLogo links={props.logo} />
+          <HeaderMenu links={props.links} languages={props.languages} activeLanguageId={props.activeLanguageId} activeId={props.activeId} />
+          <HeaderMenuSmallItems links={props.linksSmall} languages={props.languages} activeLanguageId={props.activeLanguageId} activeId={props.activeId} />
+          <div className="menu-icon-container">
+            <div className="menu-icon" onClick={onIconClicked}></div>
           </div>
         </div>
-      </header>
-    )
-  }
+      </div>
+    </header>
+  )
 }
 
 export default Header;

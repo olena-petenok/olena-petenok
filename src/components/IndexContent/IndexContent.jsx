@@ -2,20 +2,13 @@ import React from 'react';
 
 import './index.sass';
 
-function VerticalIndexBlockText(props) {
-  return ( <p>{props.value}</p> );
-}
+function VerticalIndexBlockText(props) { return ( <p>{props.value}</p> ); }
 
 function VerticalIndexBlock(props) {
   let text = '';
-  if (typeof props.text == "undefined") {
-  } else if (typeof props.text == "string") {
-    text = <VerticalIndexBlockText value={props.text} />
-  } else {
-    text = props.text.map((item) =>
-      <VerticalIndexBlockText key={item.id} value={item.value} />
-    );
-  }
+  if (typeof props.text == "undefined") { }
+  else if (typeof props.text == "string") { text = <VerticalIndexBlockText value={props.text} /> }
+  else { text = props.text.map((item) => <VerticalIndexBlockText key={item.id} value={item.value} /> ); }
 
   return (
     <div className={`uk-width-${props.ukWidth}`}>
@@ -30,7 +23,8 @@ function VerticalIndexBlock(props) {
 
 function HorizontalIndexBlock(props) {
   const blocks = props.blocks.map((item) =>
-    <VerticalIndexBlock key={item.id} ukWidth={item.ukWidth} src={item.src} alt={item.alt} title={item.title} text={item.text}/>
+    <VerticalIndexBlock key={item.id} ukWidth={item.ukWidth} src={item.src} alt={item.alt}
+                        title={item.title} text={item.text}/>
   );
 
   return (

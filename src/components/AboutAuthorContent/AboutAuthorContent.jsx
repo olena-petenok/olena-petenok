@@ -30,11 +30,8 @@ function VerticalAboutAuthorBlockTextLink(props) {
 
 function VerticalAboutAuthorBlock(props) {
   const text = props.text.map((item) => {
-    if (item.href == "") {
-      return ( <VerticalAboutAuthorBlockText key={item.id} text={item.value} /> );
-    } else {
-      return ( <VerticalAboutAuthorBlockTextLink key={item.id} text={item.value} href={item.href} /> );
-    }
+    if (item.href == "") { return ( <VerticalAboutAuthorBlockText key={item.id} text={item.value} /> ); }
+    else {  return ( <VerticalAboutAuthorBlockTextLink key={item.id} text={item.value} href={item.href} /> ); }
   });
 
   return (
@@ -64,7 +61,8 @@ function HorizontalAboutAuthorBlock(props) {
 
 function AboutAuthorContent(props) {
   const sections = props.aboutAuthor.map((item) =>
-    <HorizontalAboutAuthorBlock key={item.id} ukWidth={item.ukWidth} upDown={item.upDown} title={item.title} blocks={item.blocks} />
+    <HorizontalAboutAuthorBlock key={item.id} ukWidth={item.ukWidth} upDown={item.upDown}
+                                title={item.title} blocks={item.blocks} />
   );
 
   return (
