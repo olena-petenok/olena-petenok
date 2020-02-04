@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
 import './header.sass';
+import { openMobileMenu, closeMobileMenu } from '../../utils/helper.js';
 
 function HeaderLink(props) {
   return (
@@ -21,15 +22,13 @@ function HeaderLanguageLink(props) {
 
 function HeaderMenu(props) {
   const links = props.links.map((item) => {
-    let active = '';
-    if (props.activeId == item.id) { active = 'active'; }
-    return ( <HeaderLink key={item.id} active={active} href={item.href} value={item.value} class={item.class} /> );
+    return ( <HeaderLink key={item.id} active={props.activeId == item.id ? 'active' : ''}
+                         href={item.href} value={item.value} class={item.class} /> );
   });
 
   const languages = props.languages.map((item) => {
-    let active = '';
-    if (props.activeLanguageId == item.id) { active = 'active'; }
-    return ( <HeaderLanguageLink key={item.id} active={active} href={item.href} value={item.value} /> );
+    return ( <HeaderLanguageLink key={item.id} active={props.activeLanguageId == item.id ? 'active' : ''}
+                                 href={item.href} value={item.value} /> );
   });
 
   return (
@@ -120,15 +119,7 @@ function Header(props) {
   const [opened, setOpened] = useState(false);
 
   const onIconClicked = () => {
-    if (opened) {
-      document.querySelector(`.mobile-menu-container`).classList.remove("shown");
-      document.querySelector(`.mobile-menu-container-inner`).classList.remove("shown");
-      document.querySelector(`.menu-icon`).classList.remove("clicked");
-    } else {
-      document.querySelector(`.mobile-menu-container`).classList.add("shown");
-      document.querySelector(`.mobile-menu-container-inner`).classList.add("shown");
-      document.querySelector(`.menu-icon`).classList.add("clicked");
-    }
+    opened ? closeMobileMenu() : openMobileMenu();
     setOpened(previousOpened => !previousOpened);
   };
 

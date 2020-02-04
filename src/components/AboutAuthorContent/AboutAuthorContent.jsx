@@ -31,7 +31,7 @@ function VerticalAboutAuthorBlockTextLink(props) {
 function VerticalAboutAuthorBlock(props) {
   const text = props.text.map((item) => {
     if (item.href == "") { return ( <VerticalAboutAuthorBlockText key={item.id} text={item.value} /> ); }
-    else {  return ( <VerticalAboutAuthorBlockTextLink key={item.id} text={item.value} href={item.href} /> ); }
+    else { return ( <VerticalAboutAuthorBlockTextLink key={item.id} text={item.value} href={item.href} /> ); }
   });
 
   return (
