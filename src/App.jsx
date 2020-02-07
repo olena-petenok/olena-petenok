@@ -7,7 +7,9 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Header from './components/Header/Header';
 import { headerLanguages } from './components/Header/HeaderContext';
 
-// import Footer from './components/Footer/Footer';
+import Footer from './components/Footer/Footer';
+import { footerLanguages } from './components/Footer/FooterContext';
+
 // import IndexContent from './components/IndexContent/IndexContent';
 // import AboutAuthorContent from './components/AboutAuthorContent/AboutAuthorContent';
 //
@@ -95,8 +97,12 @@ const NotFound = () => (
 function App (props) {
   return (
     <Router>
-      <Route exact path='/' component={ () => <Header value={headerLanguages.ru} /> } />
+      <Route exact path='/' component={ () => <Footer value={footerLanguages.ua} /> } />
     </Router>
+
+    // <Router>
+    //   <Route exact path='/' component={ () => <Header value={headerLanguages.en} /> } />
+    // </Router>
 
     // <Router>
     //   <Route exact path='/' component={ () => <Index activeLanguageId={1} activeId={1} logo={DataLogoLinks} links={EnDataMenuLinks} languages={DataMenuLanguageLinks} linksSmall={EnDataHeaderMenuSmallLinks} contacts={DataFooterContacts} index={EnDataIndex} /> } />

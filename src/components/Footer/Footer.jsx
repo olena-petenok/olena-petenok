@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 
 import './footer.sass';
+import { FooterContext } from './FooterContext';
+
+import DataFooterContacts from '../../constants/json/SharedData/DataFooterContacts.json';
 
 function FooterMenuLink(props) {
   return (
@@ -58,16 +61,26 @@ function FooterContacts(props) {
   return ( <ul>{items}</ul> );
 }
 
-function Footer(props) {
+function FooterLogics(props) {
+  const context = useContext(FooterContext);
+
   return (
     <footer className="footer-background">
       <div className="uk-container">
         <div className="uk-grid">
           <div className="uk-width-1-1 uk-width-1-2@s"><FooterContacts contacts={props.contacts} /></div>
-          <div className="uk-width-1-1 uk-width-1-2@s"><FooterMenuAndCopyright links={props.links} /></div>
+          <div className="uk-width-1-1 uk-width-1-2@s"><FooterMenuAndCopyright links={context.links} /></div>
         </div>
       </div>
     </footer>
+  );
+}
+
+function Footer(props) {
+  return (
+    <FooterContext.Provider value={props.value}>
+      <FooterLogics contacts={DataFooterContacts} />
+    </FooterContext.Provider>
   );
 }
 
