@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from "react-router-dom";
 
 import './header.sass';
+import { HeaderContext } from './HeaderContext';
 import { openMobileMenu, closeMobileMenu } from '../../utils/helper.js';
+
+import DataLogoLinks from '../../constants/json/SharedData/DataLogoLinks.json';
+import DataMenuLanguageLinks from '../../constants/json/SharedData/DataMenuLanguageLinks.json';
 
 function HeaderLink(props) {
   return (
@@ -96,9 +100,8 @@ function HeaderMenuSmallItems(props) {
   });
 
   const languages = props.languages.map((item) => {
-    let active = '';
-    if (props.activeLanguageId == item.id) { active = 'active'; }
-    return ( <HeaderLanguageLink key={item.id} active={active} href={item.href} value={item.value} /> );
+    return ( <HeaderLanguageLink key={item.id} active={props.activeLanguageId == item.id ? 'active' : ''}
+                                 href={item.href} value={item.value} /> );
   });
 
   return (
@@ -115,8 +118,9 @@ function HeaderMenuSmallItems(props) {
   );
 }
 
-function Header(props) {
+function HeaderLogics(props) {
   const [opened, setOpened] = useState(false);
+  const context = useContext(HeaderContext);
 
   const onIconClicked = () => {
     opened ? closeMobileMenu() : openMobileMenu();
@@ -128,8 +132,10 @@ function Header(props) {
       <div className="uk-container">
         <div className="header-align">
           <HeaderLogo links={props.logo} />
-          <HeaderMenu links={props.links} languages={props.languages} activeLanguageId={props.activeLanguageId} activeId={props.activeId} />
-          <HeaderMenuSmallItems links={props.linksSmall} languages={props.languages} activeLanguageId={props.activeLanguageId} activeId={props.activeId} />
+          <HeaderMenu links={context.links} languages={props.languages}
+                      activeLanguageId={context.activeLanguageId} activeId={context.activeId} />
+          <HeaderMenuSmallItems links={context.linksSmall} languages={props.languages}
+                                activeLanguageId={context.activeLanguageId} activeId={context.activeId} />
           <div className="menu-icon-container">
             <div className="menu-icon" onClick={onIconClicked}></div>
           </div>
@@ -137,6 +143,14 @@ function Header(props) {
       </div>
     </header>
   )
+}
+
+function Header(props) {
+  return (
+    <HeaderContext.Provider value={props.value}>
+      <HeaderLogics logo={DataLogoLinks} languages={DataMenuLanguageLinks} />
+    </HeaderContext.Provider>
+  );
 }
 
 export default Header;
