@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 
 import EnDataMenuLinks from '../../constants/json/EnData/EnDataMenuLinks.json';
-import RuDataMenuLinks from '../../constants/json/RuData/RuDataMenuLinks.json';
 import UaDataMenuLinks from '../../constants/json/UaData/UaDataMenuLinks.json';
+import RuDataMenuLinks from '../../constants/json/RuData/RuDataMenuLinks.json';
 
 export const footerLanguages = {
   en: { links: EnDataMenuLinks },

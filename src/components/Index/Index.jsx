@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import './index.sass';
+import { IndexContext } from './IndexContext';
 
 function VerticalIndexBlockText(props) { return ( <p>{props.value}</p> ); }
 
@@ -39,12 +40,22 @@ function HorizontalIndexBlock(props) {
   );
 }
 
-function IndexContent(props) {
-  const sections = props.index.map((item) =>
+function IndexLogics(props) {
+  const context = useContext(IndexContext);
+
+  const sections = context.index.map((item) =>
     <HorizontalIndexBlock key={item.id} title={item.title} blocks={item.blocks} />
   );
 
   return ( <section className="main-background services">{sections}</section> );
 }
 
-export default IndexContent;
+function Index(props) {
+  return (
+    <IndexContext.Provider value={props.value}>
+      <IndexLogics />
+    </IndexContext.Provider>
+  );
+}
+
+export default Index;

@@ -1,80 +1,26 @@
 import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import Header from './components/Header/Header';
 import { headerLanguages } from './components/Header/HeaderContext';
-
 import Footer from './components/Footer/Footer';
 import { footerLanguages } from './components/Footer/FooterContext';
+import Index from './components/Index/Index';
+import { indexLanguages } from './components/Index/IndexContext';
+import AboutAuthor from './components/AboutAuthor/AboutAuthor';
+import { aboutAuthorLanguages } from './components/AboutAuthor/AboutAuthorContext';
 
-// import IndexContent from './components/IndexContent/IndexContent';
-// import AboutAuthorContent from './components/AboutAuthorContent/AboutAuthorContent';
-//
-// import DataLogoLinks from './constants/json/SharedData/DataLogoLinks.json';
-// import DataMenuLanguageLinks from './constants/json/SharedData/DataMenuLanguageLinks.json';
-// import DataFooterContacts from './constants/json/SharedData/DataFooterContacts.json';
-//
-// import EnDataMenuLinks from './constants/json/EnData/EnDataMenuLinks.json';
-// import EnDataHeaderMenuSmallLinks from './constants/json/EnData/EnDataHeaderMenuSmallLinks.json';
-// import EnDataIndex from './constants/json/EnData/EnDataIndex.json';
-// import EnDataAboutAuthor from './constants/json/EnData/EnDataAboutAuthor.json';
-//
-// import RuDataMenuLinks from './constants/json/RuData/RuDataMenuLinks.json';
-// import RuDataHeaderMenuSmallLinks from './constants/json/RuData/RuDataHeaderMenuSmallLinks.json';
-// import RuDataIndex from './constants/json/RuData/RuDataIndex.json';
-// import RuDataAboutAuthor from './constants/json/RuData/RuDataAboutAuthor.json';
-//
-// import UaDataMenuLinks from './constants/json/UaData/UaDataMenuLinks.json';
-// import UaDataHeaderMenuSmallLinks from './constants/json/UaData/UaDataHeaderMenuSmallLinks.json';
-// import UaDataIndex from './constants/json/UaData/UaDataIndex.json';
-// import UaDataAboutAuthor from './constants/json/UaData/UaDataAboutAuthor.json';
+// const AboutAuthor = (props) => (
+//   <>
+//     <Header value={headerLanguages.en} />
+//     <AboutAuthor value={aboutAuthorLanguages.ua} />
+//     <Footer value={footerLanguages.ua}
+//   </>
+// );
 
-/*
-const Page = (props) => (
-  <div>
-    <Header activeLanguageId={props.activeLanguageId} activeId={props.activeId} logo={props.logo} links={props.links} languages={props.languages} linksSmall={props.linksSmall} />
-    {props.children}
-    <Footer links={props.links} contacts={props.contacts} />
-  </div>
-);
-*/
-
-const Index = (props) => (
-  <div>
-    <Header activeLanguageId={props.activeLanguageId} activeId={props.activeId} logo={props.logo} links={props.links} languages={props.languages} linksSmall={props.linksSmall} />
-    <IndexContent index={props.index} />
-    <Footer links={props.links} contacts={props.contacts} />
-  </div>
-);
-
-const AboutAuthor = (props) => (
-  <div>
-    <Header activeLanguageId={props.activeLanguageId} activeId={props.activeId} logo={props.logo} links={props.links} languages={props.languages} linksSmall={props.linksSmall} />
-    <AboutAuthorContent aboutAuthor={props.aboutAuthor} />
-    <Footer links={props.links} contacts={props.contacts} />
-  </div>
-);
-
-/*
-const NotFound = () => (
-  <div>
-    <Header logo={LogoLinksData} links={MenuLinksData} languages={MenuLanguageLinksData} linksS={HeaderMenuSmallLinksData} />
-    <p>404 not found</p>
-    <Footer links={MenuLinksData} contacts={FooterContactsData} />
-  </div>
-);*/
-
-/*
-const NotFound = () => (
-  <div>
-    <p>404 not found</p>
-  </div>
-);
-*/
-
+// const NotFound = () => ( <div><p>404 not found</p></div> );
 
 // const themes = {
 //   light: { foreground: "#000000", background: "#ff0000" },
@@ -93,12 +39,19 @@ const NotFound = () => (
 // function Toolbar(props) { return ( <div><ThemedButton /></div> ); }
 // function AppTry() { return (<ThemeContext.Provider value={themes.light}><Toolbar /></ThemeContext.Provider> ); }
 
-
 function App (props) {
   return (
     <Router>
-      <Route exact path='/' component={ () => <Footer value={footerLanguages.ua} /> } />
+      <Route exact path='/' component={ () => <Index value={indexLanguages.ua} /> } />
     </Router>
+
+    // <Router>
+    //   <Route exact path='/' component={ () => <AboutAuthor value={aboutAuthorLanguages.ua} /> } />
+    // </Router>
+
+    // <Router>
+    //   <Route exact path='/' component={ () => <Footer value={footerLanguages.ua} /> } />
+    // </Router>
 
     // <Router>
     //   <Route exact path='/' component={ () => <Header value={headerLanguages.en} /> } />

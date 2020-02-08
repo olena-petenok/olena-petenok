@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import './about-author.sass';
+import { AboutAuthorContext } from './AboutAuthorContext';
 
 import PortraitImage from '../../images/about-author/portrait.jpg';
 
@@ -59,8 +60,10 @@ function HorizontalAboutAuthorBlock(props) {
   );
 }
 
-function AboutAuthorContent(props) {
-  const sections = props.aboutAuthor.map((item) =>
+function AboutAuthorLogics(props) {
+  const context = useContext(AboutAuthorContext);
+
+  const sections = context.aboutAuthor.map((item) =>
     <HorizontalAboutAuthorBlock key={item.id} ukWidth={item.ukWidth} upDown={item.upDown}
                                 title={item.title} blocks={item.blocks} />
   );
@@ -77,4 +80,12 @@ function AboutAuthorContent(props) {
   );
 }
 
-export default AboutAuthorContent;
+function AboutAuthor(props) {
+  return (
+    <AboutAuthorContext.Provider value={props.value}>
+      <AboutAuthorLogics />
+    </AboutAuthorContext.Provider>
+  );
+}
+
+export default AboutAuthor;
