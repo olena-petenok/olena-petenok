@@ -42,7 +42,7 @@ module.exports = env => {
           {
             oneOf: [
               {
-                test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+                test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.svg$/, /\.ico$/, /\.png$/],
                 loader: require.resolve("url-loader"),
                 options: {
                   limit: 50000,

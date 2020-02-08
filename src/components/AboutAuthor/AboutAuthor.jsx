@@ -10,7 +10,7 @@ function PhotoAboutAuthor() {
     <section className="uk-width-1-1 uk-width-1-3@s">
       <div className="portrait-image-block">
         <div className="portrait-image-shadow">
-          <img src={PortraitImage} alt="portrait" className="portrait-image parallelogram-block-shadow" />
+          <img src={`/${PortraitImage}`} alt="portrait" className="portrait-image parallelogram-block-shadow" />
         </div>
       </div>
     </section>
