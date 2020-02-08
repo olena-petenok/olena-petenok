@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 import './index.sass';
-import { IndexContext } from './IndexContext';
+import { indexLanguages, IndexContext } from './IndexContext';
 
 function VerticalIndexBlockText(props) { return ( <p>{props.value}</p> ); }
 
@@ -51,8 +51,15 @@ function IndexLogics(props) {
 }
 
 function Index(props) {
+  const languages = {
+    'en': indexLanguages.en,
+    'ua': indexLanguages.ua,
+    'ru': indexLanguages.ru,
+    'default': indexLanguages.en
+  };
+
   return (
-    <IndexContext.Provider value={props.value}>
+    <IndexContext.Provider value={languages[props.language] || languages['default']}>
       <IndexLogics />
     </IndexContext.Provider>
   );

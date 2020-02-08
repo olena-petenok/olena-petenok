@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link } from "react-router-dom";
 
 import './header.sass';
-import { HeaderContext } from './HeaderContext';
+import { headerLanguages, HeaderContext } from './HeaderContext';
 import { openMobileMenu, closeMobileMenu } from '../../utils/helper.js';
 
 import DataLogoLinks from '../../constants/json/SharedData/DataLogoLinks.json';
@@ -146,8 +146,15 @@ function HeaderLogics(props) {
 }
 
 function Header(props) {
+  const languages = {
+    'en': headerLanguages.en,
+    'ua': headerLanguages.ua,
+    'ru': headerLanguages.ru,
+    'default': headerLanguages.en
+  };
+
   return (
-    <HeaderContext.Provider value={props.value}>
+    <HeaderContext.Provider value={languages[props.language] || languages['default']}>
       <HeaderLogics logo={DataLogoLinks} languages={DataMenuLanguageLinks} />
     </HeaderContext.Provider>
   );

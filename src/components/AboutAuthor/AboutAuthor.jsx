@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 import './about-author.sass';
-import { AboutAuthorContext } from './AboutAuthorContext';
+import { aboutAuthorLanguages, AboutAuthorContext } from './AboutAuthorContext';
 
 import PortraitImage from '../../images/about-author/portrait.jpg';
 
@@ -81,8 +81,15 @@ function AboutAuthorLogics(props) {
 }
 
 function AboutAuthor(props) {
+  const languages = {
+    'en': aboutAuthorLanguages.en,
+    'ua': aboutAuthorLanguages.ua,
+    'ru': aboutAuthorLanguages.ru,
+    'default': aboutAuthorLanguages.en
+  };
+
   return (
-    <AboutAuthorContext.Provider value={props.value}>
+    <AboutAuthorContext.Provider value={languages[props.language] || languages['default']}>
       <AboutAuthorLogics />
     </AboutAuthorContext.Provider>
   );

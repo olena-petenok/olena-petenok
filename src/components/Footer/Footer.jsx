@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 
 import './footer.sass';
-import { FooterContext } from './FooterContext';
+import { footerLanguages, FooterContext } from './FooterContext';
 
 import DataFooterContacts from '../../constants/json/SharedData/DataFooterContacts.json';
 
@@ -77,8 +77,15 @@ function FooterLogics(props) {
 }
 
 function Footer(props) {
+  const languages = {
+    'en': footerLanguages.en,
+    'ua': footerLanguages.ua,
+    'ru': footerLanguages.ru,
+    'default': footerLanguages.en
+  };
+
   return (
-    <FooterContext.Provider value={props.value}>
+    <FooterContext.Provider value={languages[props.language] || languages['default']}>
       <FooterLogics contacts={DataFooterContacts} />
     </FooterContext.Provider>
   );

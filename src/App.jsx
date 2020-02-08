@@ -4,19 +4,15 @@ import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import Header from './components/Header/Header';
-import { headerLanguages } from './components/Header/HeaderContext';
 import Footer from './components/Footer/Footer';
-import { footerLanguages } from './components/Footer/FooterContext';
 import Index from './components/Index/Index';
-import { indexLanguages } from './components/Index/IndexContext';
 import AboutAuthor from './components/AboutAuthor/AboutAuthor';
-import { aboutAuthorLanguages } from './components/AboutAuthor/AboutAuthorContext';
 
-// const AboutAuthor = (props) => (
+// const AboutAuthor = props => (
 //   <>
-//     <Header value={headerLanguages.en} />
-//     <AboutAuthor value={aboutAuthorLanguages.ua} />
-//     <Footer value={footerLanguages.ua}
+//     <Header value={props.header} />
+//     <AboutAuthor value={props.aboutAuthor} />
+//     <Footer value={props.footer}
 //   </>
 // );
 
@@ -41,20 +37,24 @@ import { aboutAuthorLanguages } from './components/AboutAuthor/AboutAuthorContex
 
 function App (props) {
   return (
+    // <Router>
+    //   <Route exact path='/' component={ () => <AboutAuthor header={headerLanguages.en} /> } />
+    // </Router>
+
     <Router>
-      <Route exact path='/' component={ () => <Index value={indexLanguages.ua} /> } />
+      <Route exact path='/' component={ () => <Index language={'ru'} /> } />
     </Router>
 
     // <Router>
-    //   <Route exact path='/' component={ () => <AboutAuthor value={aboutAuthorLanguages.ua} /> } />
+    //   <Route exact path='/' component={ () => <AboutAuthor /> } />
     // </Router>
 
     // <Router>
-    //   <Route exact path='/' component={ () => <Footer value={footerLanguages.ua} /> } />
+    //   <Route exact path='/' component={ () => <Footer language={'en'} /> } />
     // </Router>
 
     // <Router>
-    //   <Route exact path='/' component={ () => <Header value={headerLanguages.en} /> } />
+    //   <Route exact path='/' component={ () => <Header language={'ua'} /> } />
     // </Router>
 
     // <Router>
