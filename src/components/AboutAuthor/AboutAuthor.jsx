@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import './about-author.sass';
+import { aboutAuthorLanguages, AboutAuthorContext } from './AboutAuthorContext';
 
 import PortraitImage from '../../images/about-author/portrait.jpg';
 
@@ -9,7 +10,7 @@ function PhotoAboutAuthor() {
     <section className="uk-width-1-1 uk-width-1-3@s">
       <div className="portrait-image-block">
         <div className="portrait-image-shadow">
-          <img src={PortraitImage} alt="portrait" className="portrait-image parallelogram-block-shadow" />
+          <img src={`/${PortraitImage}`} alt="portrait" className="portrait-image parallelogram-block-shadow" />
         </div>
       </div>
     </section>
@@ -59,8 +60,10 @@ function HorizontalAboutAuthorBlock(props) {
   );
 }
 
-function AboutAuthorContent(props) {
-  const sections = props.aboutAuthor.map((item) =>
+function AboutAuthorLogics(props) {
+  const context = useContext(AboutAuthorContext);
+
+  const sections = context.aboutAuthor.map((item) =>
     <HorizontalAboutAuthorBlock key={item.id} ukWidth={item.ukWidth} upDown={item.upDown}
                                 title={item.title} blocks={item.blocks} />
   );
@@ -77,4 +80,19 @@ function AboutAuthorContent(props) {
   );
 }
 
-export default AboutAuthorContent;
+function AboutAuthor(props) {
+  const languages = {
+    'en': aboutAuthorLanguages.en,
+    'ua': aboutAuthorLanguages.ua,
+    'ru': aboutAuthorLanguages.ru,
+    'default': aboutAuthorLanguages.en
+  };
+
+  return (
+    <AboutAuthorContext.Provider value={languages[props.language] || languages['default']}>
+      <AboutAuthorLogics />
+    </AboutAuthorContext.Provider>
+  );
+}
+
+export default AboutAuthor;

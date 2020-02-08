@@ -13,8 +13,5 @@ const root = document.createElement('div');
 document.body.appendChild(root);
 root.style.height = '100%';
 
-function renderApp() {
-  render (<App />, root);
-}
-
+function renderApp() { render (<App />, root); }
 renderApp();
