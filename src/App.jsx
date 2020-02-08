@@ -8,63 +8,34 @@ import Footer from './components/Footer/Footer';
 import Index from './components/Index/Index';
 import AboutAuthor from './components/AboutAuthor/AboutAuthor';
 
-// const AboutAuthor = props => (
-//   <>
-//     <Header value={props.header} />
-//     <AboutAuthor value={props.aboutAuthor} />
-//     <Footer value={props.footer}
-//   </>
-// );
+function App() {
+  const AboutAuthorPage = props => (
+    <>
+      <Header language={props.language} />
+      <AboutAuthor language={props.language} />
+      <Footer language={props.language} />
+    </>
+  );
 
-// const NotFound = () => ( <div><p>404 not found</p></div> );
+  const IndexPage = props => (
+    <>
+      <Header language={props.language} />
+      <Index language={props.language} />
+      <Footer language={props.language} />
+    </>
+  );
 
-// const themes = {
-//   light: { foreground: "#000000", background: "#ff0000" },
-//   dark: { foreground: "#ffffff", background: "#00ff00" }
-// };
-// const ThemeContext = React.createContext(themes.dark);
-//
-// function ThemedButton() {
-//   const theme = useContext(ThemeContext);
-//   return (
-//     <button style={{ background: theme.background, color: theme.foreground }}>
-//       I am styled by theme context!
-//     </button>
-//   );
-// }
-// function Toolbar(props) { return ( <div><ThemedButton /></div> ); }
-// function AppTry() { return (<ThemeContext.Provider value={themes.light}><Toolbar /></ThemeContext.Provider> ); }
+  // const NotFound = () => ( <div><p>404 not found</p></div> );
 
-function App (props) {
   return (
-    // <Router>
-    //   <Route exact path='/' component={ () => <AboutAuthor header={headerLanguages.en} /> } />
-    // </Router>
-
     <Router>
-      <Route exact path='/' component={ () => <Index language={'ru'} /> } />
+      <Route exact path='/' component={ () => <IndexPage language={'en'} /> } />
+      <Route exact path='/about-author' component={ () => <AboutAuthorPage language={'en'} /> } />
+      <Route exact path='/ua' component={ () => <IndexPage language={'ua'} /> } />
+      <Route exact path='/about-author/ua' component={ () => <AboutAuthorPage language={'ua'} /> } />
+      <Route exact path='/ru' component={ () => <IndexPage language={'ru'} /> } />
+      <Route exact path='/about-author/ru' component={ () => <AboutAuthorPage language={'ru'} /> } />
     </Router>
-
-    // <Router>
-    //   <Route exact path='/' component={ () => <AboutAuthor /> } />
-    // </Router>
-
-    // <Router>
-    //   <Route exact path='/' component={ () => <Footer language={'en'} /> } />
-    // </Router>
-
-    // <Router>
-    //   <Route exact path='/' component={ () => <Header language={'ua'} /> } />
-    // </Router>
-
-    // <Router>
-    //   <Route exact path='/' component={ () => <Index activeLanguageId={1} activeId={1} logo={DataLogoLinks} links={EnDataMenuLinks} languages={DataMenuLanguageLinks} linksSmall={EnDataHeaderMenuSmallLinks} contacts={DataFooterContacts} index={EnDataIndex} /> } />
-    //   <Route exact path='/about-author' component={ () => <AboutAuthor activeLanguageId={1} activeId={2} logo={DataLogoLinks} links={EnDataMenuLinks} languages={DataMenuLanguageLinks} linksSmall={EnDataHeaderMenuSmallLinks} contacts={DataFooterContacts} aboutAuthor={EnDataAboutAuthor} /> } />
-    //   <Route exact path='/ua' component={ () => <Index activeLanguageId={2} activeId={1} logo={DataLogoLinks} links={UaDataMenuLinks} languages={DataMenuLanguageLinks} linksSmall={UaDataHeaderMenuSmallLinks} contacts={DataFooterContacts} index={UaDataIndex} /> } />
-    //   <Route exact path='/ua/about-author' component={ () => <AboutAuthor activeLanguageId={2} activeId={2} logo={DataLogoLinks} links={UaDataMenuLinks} languages={DataMenuLanguageLinks} linksSmall={UaDataHeaderMenuSmallLinks} contacts={DataFooterContacts} aboutAuthor={UaDataAboutAuthor} /> } />
-    //   <Route exact path='/ru' component={ () => <Index activeLanguageId={3} activeId={1} logo={DataLogoLinks} links={RuDataMenuLinks} languages={DataMenuLanguageLinks} linksSmall={RuDataHeaderMenuSmallLinks} contacts={DataFooterContacts} index={RuDataIndex} /> } />
-    //   <Route exact path='/ru/about-author' component={ () => <AboutAuthor activeLanguageId={3} activeId={2} logo={DataLogoLinks} links={RuDataMenuLinks} languages={DataMenuLanguageLinks} linksSmall={RuDataHeaderMenuSmallLinks} contacts={DataFooterContacts} aboutAuthor={RuDataAboutAuthor} /> } />
-    // </Router>
   );
 }
 
