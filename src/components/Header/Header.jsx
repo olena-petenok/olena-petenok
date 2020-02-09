@@ -25,13 +25,15 @@ function HeaderLanguageLink(props) {
 }
 
 function HeaderMenu(props) {
-  const links = props.links.map((item) => {
-    return ( <HeaderLink key={item.id} active={props.activeId == item.id ? 'active' : ''}
+  const context = useContext(HeaderContext);
+
+  const links = context.links.map((item) => {
+    return ( <HeaderLink key={item.id} active={context.activeId == item.id ? 'active' : ''}
                          href={item.href} value={item.value} class={item.class} /> );
   });
 
   const languages = props.languages.map((item) => {
-    return ( <HeaderLanguageLink key={item.id} active={props.activeLanguageId == item.id ? 'active' : ''}
+    return ( <HeaderLanguageLink key={item.id} active={context.activeLanguageId == item.id ? 'active' : ''}
                                  href={item.href} value={item.value} /> );
   });
 
@@ -89,7 +91,9 @@ function HeaderMenuSmallSpanLinkExternal(props) {
 }
 
 function HeaderMenuSmallItems(props) {
-  const links = props.links.map((item) => {
+  const context = useContext(HeaderContext);
+
+  const links = context.links.map((item) => {
     if (item.href == "") {
       return ( <HeaderMenuSmallSpan key={item.id} icon={item.icon} value={item.value} /> );
     } else if (item.external == "") {
@@ -100,7 +104,7 @@ function HeaderMenuSmallItems(props) {
   });
 
   const languages = props.languages.map((item) => {
-    return ( <HeaderLanguageLink key={item.id} active={props.activeLanguageId == item.id ? 'active' : ''}
+    return ( <HeaderLanguageLink key={item.id} active={context.activeLanguageId == item.id ? 'active' : ''}
                                  href={item.href} value={item.value} /> );
   });
 
@@ -132,10 +136,8 @@ function HeaderLogics(props) {
       <div className="uk-container">
         <div className="header-align">
           <HeaderLogo links={props.logo} />
-          <HeaderMenu links={context.links} languages={props.languages}
-                      activeLanguageId={context.activeLanguageId} activeId={context.activeId} />
-          <HeaderMenuSmallItems links={context.linksSmall} languages={props.languages}
-                                activeLanguageId={context.activeLanguageId} activeId={context.activeId} />
+          <HeaderMenu languages={props.languages} />
+          <HeaderMenuSmallItems languages={props.languages} />
           <div className="menu-icon-container">
             <div className="menu-icon" onClick={onIconClicked}></div>
           </div>

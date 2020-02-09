@@ -5,6 +5,7 @@ import './footer.sass';
 import { footerLanguages, FooterContext } from './FooterContext';
 
 import DataFooterContacts from '../../constants/json/SharedData/DataFooterContacts.json';
+import { copyright } from '../../constants/strings.js';
 
 function FooterMenuLink(props) {
   return (
@@ -14,12 +15,13 @@ function FooterMenuLink(props) {
   );
 }
 
-function FooterCopyright(props) {
-  return ( <li className="footer-item text-item-colors-underline copyright">&#x24B8; Petenok Olena, 2019</li> );
+function FooterCopyright() {
+  return ( <li className="footer-item text-item-colors-underline copyright">&#x24B8; {copyright}</li> );
 }
 
 function FooterMenuAndCopyright(props) {
-  const links = props.links.map((item) => <FooterMenuLink key={item.id} href={item.href} value={item.value} /> );
+  const context = useContext(FooterContext);
+  const links = context.links.map((item) => <FooterMenuLink key={item.id} href={item.href} value={item.value} /> );
 
   return (
     <ul className="footer-menu-copyright-block">
@@ -62,14 +64,12 @@ function FooterContacts(props) {
 }
 
 function FooterLogics(props) {
-  const context = useContext(FooterContext);
-
   return (
     <footer className="footer-background">
       <div className="uk-container">
         <div className="uk-grid">
           <div className="uk-width-1-1 uk-width-1-2@s"><FooterContacts contacts={props.contacts} /></div>
-          <div className="uk-width-1-1 uk-width-1-2@s"><FooterMenuAndCopyright links={context.links} /></div>
+          <div className="uk-width-1-1 uk-width-1-2@s"><FooterMenuAndCopyright /></div>
         </div>
       </div>
     </footer>

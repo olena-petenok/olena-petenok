@@ -42,7 +42,6 @@ function HorizontalIndexBlock(props) {
 
 function IndexLogics(props) {
   const context = useContext(IndexContext);
-
   const sections = context.index.map((item) =>
     <HorizontalIndexBlock key={item.id} title={item.title} blocks={item.blocks} />
   );
