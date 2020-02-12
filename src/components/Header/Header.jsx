@@ -25,16 +25,19 @@ function HeaderLanguageLink(props) {
 }
 
 function HeaderMenu(props) {
+  const { language, page } = props;
   const context = useContext(HeaderContext);
 
-  const links = context.links.map((item) => {
-    return ( <HeaderLink key={item.id} active={context.activeId == item.id ? 'active' : ''}
-                         href={item.href} value={item.value} class={item.class} /> );
+  const links = context.links.map(item => {
+    return ( <HeaderLink key={item.id} value={item.value} class={item.class} href={`/${item.href}`}
+                         active={((page === '/' && item.href.length <= 2) ||
+                                   page === item.href.split('/')[0]) ? 'active' : ''} /> );
   });
 
-  const languages = props.languages.map((item) => {
-    return ( <HeaderLanguageLink key={item.id} active={context.activeLanguageId == item.id ? 'active' : ''}
-                                 href={item.href} value={item.value} /> );
+  const languages = props.languages.map(item => {
+    return ( <HeaderLanguageLink key={item.id} value={item.value}
+                                 active={language === item.value ? 'active' : ''}
+                                 href={`${page === '/' ? '/' : `/${page}/`}${item.href}`} /> );
   });
 
   return (
@@ -52,8 +55,9 @@ function HeaderLogoLink(props) {
 }
 
 function HeaderLogo(props) {
-  const links = props.links.map((item) =>
-    <HeaderLogoLink key={item.id} id={item.id} href={item.href} value={item.value} />
+  const links = props.links.map(item =>
+    <HeaderLogoLink key={item.id} id={item.id} value={item.value}
+                    href={`/${props.language === 'en' ? '' : props.language}`} />
   );
 
   return ( <ul>{links}</ul> );
@@ -93,7 +97,7 @@ function HeaderMenuSmallSpanLinkExternal(props) {
 function HeaderMenuSmallItems(props) {
   const context = useContext(HeaderContext);
 
-  const links = context.links.map((item) => {
+  const links = context.links.map(item => {
     if (item.href == "") {
       return ( <HeaderMenuSmallSpan key={item.id} icon={item.icon} value={item.value} /> );
     } else if (item.external == "") {
@@ -103,8 +107,8 @@ function HeaderMenuSmallItems(props) {
     }
   });
 
-  const languages = props.languages.map((item) => {
-    return ( <HeaderLanguageLink key={item.id} active={context.activeLanguageId == item.id ? 'active' : ''}
+  const languages = props.languages.map(item => {
+    return ( <HeaderLanguageLink key={item.id} active={''}
                                  href={item.href} value={item.value} /> );
   });
 
@@ -123,8 +127,8 @@ function HeaderMenuSmallItems(props) {
 }
 
 function HeaderLogics(props) {
+  const { logo, languages, language, page } = props;
   const [opened, setOpened] = useState(false);
-  const context = useContext(HeaderContext);
 
   const onIconClicked = () => {
     opened ? closeMobileMenu() : openMobileMenu();
@@ -135,9 +139,9 @@ function HeaderLogics(props) {
     <header className="header-background">
       <div className="uk-container">
         <div className="header-align">
-          <HeaderLogo links={props.logo} />
-          <HeaderMenu languages={props.languages} />
-          <HeaderMenuSmallItems languages={props.languages} />
+          <HeaderLogo links={logo} language={language} />
+          <HeaderMenu languages={languages} language={language} page={page} />
+          <HeaderMenuSmallItems languages={languages} language={language} page={page} />
           <div className="menu-icon-container">
             <div className="menu-icon" onClick={onIconClicked}></div>
           </div>
@@ -155,9 +159,16 @@ function Header(props) {
     'default': headerLanguages.en
   };
 
+  const pages = {
+    'index': '/',
+    'aboutAuthor': 'about-author',
+    'default': '/'
+  };
+
   return (
     <HeaderContext.Provider value={languages[props.language] || languages['default']}>
-      <HeaderLogics logo={DataLogoLinks} languages={DataMenuLanguageLinks} />
+      <HeaderLogics logo={DataLogoLinks} languages={DataMenuLanguageLinks}
+                    language={props.language} page={pages[props.page] || pages['default']} />
     </HeaderContext.Provider>
   );
 }

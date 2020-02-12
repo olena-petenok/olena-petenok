@@ -1,1 +1,1 @@
-export const copyright = 'Petenok Olena, 2020';
+export const COPYRIGHT = 'Petenok Olena, 2020';

@@ -5,7 +5,7 @@ import './footer.sass';
 import { footerLanguages, FooterContext } from './FooterContext';
 
 import DataFooterContacts from '../../constants/json/SharedData/DataFooterContacts.json';
-import { copyright } from '../../constants/strings.js';
+import { COPYRIGHT } from '../../constants/strings.js';
 
 function FooterMenuLink(props) {
   return (
@@ -16,7 +16,7 @@ function FooterMenuLink(props) {
 }
 
 function FooterCopyright() {
-  return ( <li className="footer-item text-item-colors-underline copyright">&#x24B8; {copyright}</li> );
+  return ( <li className="footer-item text-item-colors-underline copyright">&#x24B8; {COPYRIGHT}</li> );
 }
 
 function FooterMenuAndCopyright(props) {

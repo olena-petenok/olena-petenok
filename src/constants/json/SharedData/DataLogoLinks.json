@@ -1,4 +1,4 @@
 [
-  {"id": "petenok", "href": "/", "value": "Petenok"},
-  {"id": "olena", "href": "/", "value": "Olena"}
+  {"id": "petenok", "value": "Petenok"},
+  {"id": "olena", "value": "Olena"}
 ]

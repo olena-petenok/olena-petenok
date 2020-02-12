@@ -29,6 +29,15 @@ export function generateItemForIndexJson(item, images) {
   };
 }
 
-export function parseIndexJson (data, images) {
+export function parseIndexJson(data, images) {
   return data.map(item => generateItemForIndexJson(item, images));
 }
+
+// export function getFromLocalStorage(item) {
+//   const result = window.localStorage.getItem(item);
+//   return result ? JSON.parse(result) : null;
+// }
+//
+// export function setInLocalStorage(item, value) {
+//   window.localStorage.setItem(item, JSON.stringify(value));
+// }

@@ -11,20 +11,14 @@ import RuDataHeaderMenuSmallLinks from '../../constants/json/RuData/RuDataHeader
 
 export const headerLanguages = {
   en: {
-    activeLanguageId: 1,
-    activeId: 1,
     links: EnDataMenuLinks,
     linksSmall: EnDataHeaderMenuSmallLinks
   },
   ua: {
-    activeLanguageId: 2,
-    activeId: 1,
     links: UaDataMenuLinks,
     linksSmall: UaDataHeaderMenuSmallLinks
   },
   ru: {
-    activeLanguageId: 3,
-    activeId: 1,
     links: RuDataMenuLinks,
     linksSmall: RuDataHeaderMenuSmallLinks
   }
