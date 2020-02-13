@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
 import './footer.sass';
@@ -89,5 +90,8 @@ function Footer(props) {
     </FooterContext.Provider>
   );
 }
+
+Footer.propTypes = { language: PropTypes.string };
+Footer.defaultProps = { language: 'en' };
 
 export default Footer;

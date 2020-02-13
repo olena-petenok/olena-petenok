@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
 import './header.sass';
@@ -159,5 +160,8 @@ function Header(props) {
     </HeaderContext.Provider>
   );
 }
+
+Header.propTypes = { language: PropTypes.string, page: PropTypes.string };
+Header.defaultProps = { language: 'en', page: 'index' };
 
 export default Header;
