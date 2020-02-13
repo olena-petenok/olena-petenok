@@ -25,25 +25,16 @@ function HeaderLanguageLink(props) {
 }
 
 function HeaderMenu(props) {
-  const { language, page } = props;
-  const context = useContext(HeaderContext);
-
-  const links = context.links.map(item => {
+  const links = useContext(HeaderContext).links.map(item => {
     return ( <HeaderLink key={item.id} value={item.value} class={item.class} href={`/${item.href}`}
-                         active={((page === '/' && item.href.length <= 2) ||
-                                   page === item.href.split('/')[0]) ? 'active' : ''} /> );
-  });
-
-  const languages = props.languages.map(item => {
-    return ( <HeaderLanguageLink key={item.id} value={item.value}
-                                 active={language === item.value ? 'active' : ''}
-                                 href={`${page === '/' ? '/' : `/${page}/`}${item.href}`} /> );
+                         active={((props.page === '/' && item.href.length <= 2) ||
+                                   props.page === item.href.split('/')[0]) ? 'active' : ''} /> );
   });
 
   return (
     <nav className="text-menu-large-screen">
       <ul className="uk-flex uk-flex-right">
-        <li className="menu-item"><ul className="uk-flex uk-flex-right">{languages}</ul></li>
+        <li className="menu-item"><ul className="uk-flex uk-flex-right">{props.languages}</ul></li>
         {links}
       </ul>
     </nav>
@@ -95,21 +86,11 @@ function HeaderMenuSmallSpanLinkExternal(props) {
 }
 
 function HeaderMenuSmallItems(props) {
-  const context = useContext(HeaderContext);
-
-  const links = context.links.map(item => {
-    if (item.href == "") {
-      return ( <HeaderMenuSmallSpan key={item.id} icon={item.icon} value={item.value} /> );
-    } else if (item.external == "") {
-      return ( <HeaderMenuSmallSpanLink key={item.id} href={item.href} icon={item.icon} value={item.value} /> );
-    } else {
-      return ( <HeaderMenuSmallSpanLinkExternal key={item.id} href={item.href} icon={item.icon} value={item.value} /> );
-    }
-  });
-
-  const languages = props.languages.map(item => {
-    return ( <HeaderLanguageLink key={item.id} active={''}
-                                 href={item.href} value={item.value} /> );
+  const links = useContext(HeaderContext).linksSmall.map(item => {
+    const { id, icon, value, href, external } = item;
+    if (href === "") { return ( <HeaderMenuSmallSpan key={id} icon={icon} value={value} /> ); }
+    else if (external === "") { return ( <HeaderMenuSmallSpanLink key={id} href={href} icon={icon} value={value} /> ); }
+    else { return ( <HeaderMenuSmallSpanLinkExternal key={id} href={href} icon={icon} value={value} /> ); }
   });
 
   return (
@@ -118,7 +99,7 @@ function HeaderMenuSmallItems(props) {
         <nav>
           <ul>
             {links}
-            <li className="item"><ul className="languages-align">{languages}</ul></li>
+            <li className="item"><ul className="languages-align">{props.languages}</ul></li>
           </ul>
         </nav>
       </div>
@@ -135,13 +116,19 @@ function HeaderLogics(props) {
     setOpened(previousOpened => !previousOpened);
   };
 
+  const languagesArray = props.languages.map(item => {
+    const { id, value, href } = item;
+    return ( <HeaderLanguageLink key={id} value={value} active={language === value ? 'active' : ''}
+                                 href={`${page === '/' ? '/' : `/${page}/`}${href}`} /> );
+  });
+
   return (
     <header className="header-background">
       <div className="uk-container">
         <div className="header-align">
           <HeaderLogo links={logo} language={language} />
-          <HeaderMenu languages={languages} language={language} page={page} />
-          <HeaderMenuSmallItems languages={languages} language={language} page={page} />
+          <HeaderMenu languages={languagesArray} page={page} />
+          <HeaderMenuSmallItems languages={languagesArray} />
           <div className="menu-icon-container">
             <div className="menu-icon" onClick={onIconClicked}></div>
           </div>

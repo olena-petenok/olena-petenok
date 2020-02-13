@@ -20,8 +20,9 @@ function FooterCopyright() {
 }
 
 function FooterMenuAndCopyright(props) {
-  const context = useContext(FooterContext);
-  const links = context.links.map((item) => <FooterMenuLink key={item.id} href={item.href} value={item.value} /> );
+  const links = useContext(FooterContext).links.map(item =>
+    <FooterMenuLink key={item.id} href={`/${item.href}`} value={item.value} />
+  );
 
   return (
     <ul className="footer-menu-copyright-block">
@@ -52,12 +53,10 @@ function FooterContactsElement(props) {
 }
 
 function FooterContacts(props) {
-  const items = props.contacts.map((item) => {
-    if (item.href == "") {
-      return ( <FooterContactsElement key={item.id} icon={item.icon} value={item.value} /> );
-    } else {
-      return ( <FooterContactsLink key={item.id} href={item.href} icon={item.icon} value={item.value} /> );
-    }
+  const items = props.contacts.map(item => {
+    const { id, value, href, icon } = item;
+    if (href === "") { return ( <FooterContactsElement key={id} icon={icon} value={value} /> ); }
+    else { return ( <FooterContactsLink key={id} href={href} icon={icon} value={value} /> ); }
   });
 
   return ( <ul>{items}</ul> );
