@@ -23,7 +23,7 @@ module.exports = env => {
       devServer: {
         contentBase: path.join(APP_DIR, "dist"),
         compress: false,
-        port: 3001
+        port: 3000
       },
       target: "web",
       optimization: {

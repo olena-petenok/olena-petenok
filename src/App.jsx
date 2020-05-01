@@ -1,18 +1,22 @@
 import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 import Page from './components/Page/Page';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
     <Router>
-      <Route exact path='/' component={ () => <Page /> } />
-      <Route exact path='/about-author' component={ () => <Page page={'aboutAuthor'} /> } />
-      <Route exact path='/ua' component={ () => <Page language={'ua'} /> } />
-      <Route exact path='/about-author/ua' component={ () => <Page language={'ua'} page={'aboutAuthor'} /> } />
-      <Route exact path='/ru' component={ () => <Page language={'ru'} /> } />
-      <Route exact path='/about-author/ru' component={ () => <Page language={'ru'} page={'aboutAuthor'} /> } />
+      <Switch>
+        <Route exact path='/'><Page /></Route>
+        <Route exact path='/ua'><Page language={'ua'} /></Route>
+        <Route exact path='/ru'><Page language={'ru'} /></Route>
+        <Route exact path='/about-author'><Page page={'aboutAuthor'} /></Route>
+        <Route exact path='/about-author/ua'><Page page={'aboutAuthor'} language={'ua'} /></Route>
+        <Route exact path='/about-author/ru'><Page page={'aboutAuthor'} language={'ru'} /></Route>
+        <Route path='*'><NotFound /></Route>
+      </Switch>
     </Router>
   );
 }
