@@ -3,13 +3,24 @@
     "id": "1",
     "title": "Что такое WEB разработка?",
     "blocks": [
-      {"id": "1", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "Services1", "alt": "image", "title": "Создание сайтов с нуля", "text": ""},
-      {"id": "2", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "Services2", "alt": "image", "title": "Поддержка созданных сайтов", "text": ""},
-      {"id": "3", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "Services3", "alt": "image", "title": "Добавления нового контента", "text": ""},
-      {"id": "4", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "Services4", "alt": "image", "title": "Оптимизация и редизайн", "text": ""}
+      {"id": "1", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "WebDevelopment1", "alt": "image", "title": "Создание сайтов с нуля", "text": ""},
+      {"id": "2", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "WebDevelopment2", "alt": "image", "title": "Поддержка созданных сайтов", "text": ""},
+      {"id": "3", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "WebDevelopment3", "alt": "image", "title": "Добавления нового контента", "text": ""},
+      {"id": "4", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "WebDevelopment4", "alt": "image", "title": "Оптимизация и редизайн", "text": ""}
     ]
   },{
     "id": "2",
+    "title": "Почему React столь крут?",
+    "blocks": [
+      {"id": "1", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "ReactIsAwesome1", "alt": "image", "title": "Рендеринг на стороне клиента", "text": ""},
+      {"id": "2", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "ReactIsAwesome2", "alt": "image", "title": "Компонентно-ориентированный", "text": ""},
+      {"id": "3", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "ReactIsAwesome3", "alt": "image", "title": "Декларативний", "text": ""},
+      {"id": "4", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "ReactIsAwesome4", "alt": "image", "title": "Возможность разработки новых функций без переписывания существующего кода", "text": ""},
+      {"id": "5", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "ReactIsAwesome5", "alt": "image", "title": "Существует много внешних плагинов", "text": ""},
+      {"id": "6", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "ReactIsAwesome6", "alt": "image", "title": "Отличная официальная документация", "text": ""}
+    ]
+  },{
+    "id": "3",
     "title": "Высококачественный сайт отличается этим:",
     "blocks": [
       {
@@ -39,7 +50,7 @@
       }
     ]
   },{
-    "id": "3",
+    "id": "4",
     "title": "Типы сайтов",
     "blocks": [
       {"id": "1", "ukWidth": "1-1 uk-width-1-2@m uk-width-1-3@l", "src": "TypesOfWebsites1", "alt": "image", "title": "Онлайн визитная карта", "text": "Небольшой сайт, обычно состоящий из одной или нескольких веб-страниц и базовой информации об организации, частном лице, компании, товарах или услугах, прайс-листах, контактной информации."},
@@ -48,17 +59,6 @@
       {"id": "4", "ukWidth": "1-1 uk-width-1-2@m uk-width-1-3@l", "src": "TypesOfWebsites4", "alt": "image", "title": "Блог", "text": "Основной контент - регулярно добавляемые записи, содержащие текст, изображения или мультимедиа с возможностью публикации отзывов (комментариев) посетителей."},
       {"id": "5", "ukWidth": "1-1 uk-width-1-2@m uk-width-1-3@l", "src": "TypesOfWebsites5", "alt": "image", "title": "Галерея", "text": "Предоставляет возможность просмотра различного мультимедийного и текстового контента (списки, блоки, слайдеры, обычно - со ссылками на подробные версии)."},
       {"id": "6", "ukWidth": "1-1 uk-width-1-2@m uk-width-1-3@l", "src": "TypesOfWebsites6", "alt": "image", "title": "Интернет магазин", "text": "Цель в торговле через Интернет. Позволяет пользователям просматривать ассортимент товаров и услуг компании с изображениями, ценами, информацией о технических характеристиках, использовать различные удобные фильтры, создавать заказ на покупку, выбирать способы оплаты и доставки заказа, оплачивать заказ."}
-    ]
-  },{
-    "id": "4",
-    "title": "Что обдумывает клиент перед заказом?",
-    "blocks": [
-      {"id": "1", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "BeforeOrdering1", "alt": "image", "title": "Зачем мне нужен сайт?", "text": ""},
-      {"id": "2", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "BeforeOrdering2", "alt": "image", "title": "Что именно я хочу опубликовать?", "text": ""},
-      {"id": "3", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "BeforeOrdering3", "alt": "image", "title": "Какие страницы мне нужны?", "text": ""},
-      {"id": "4", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "BeforeOrdering4", "alt": "image", "title": "Нужна ли обратная связь от клиентов?", "text": ""},
-      {"id": "5", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "BeforeOrdering5", "alt": "image", "title": "В каком цвете (цветах) мне нужен сайт?", "text": ""},
-      {"id": "6", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "BeforeOrdering6", "alt": "image", "title": "Где я планирую разместить сайт?", "text": ""}
     ]
   }
 ]

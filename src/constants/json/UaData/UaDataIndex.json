@@ -3,13 +3,24 @@
     "id": "1",
     "title": "Що таке WEB розробка?",
     "blocks": [
-      {"id": "1", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "Services1", "alt": "image", "title": "Створення сайтів з нуля", "text": ""},
-      {"id": "2", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "Services2", "alt": "image", "title": "Підтримка створених сайтів", "text": ""},
-      {"id": "3", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "Services3", "alt": "image", "title": "Додавання нового контенту", "text": ""},
-      {"id": "4", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "Services4", "alt": "image", "title": "Оптимізація та редизайн", "text": ""}
+      {"id": "1", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "WebDevelopment1", "alt": "image", "title": "Створення сайтів з нуля", "text": ""},
+      {"id": "2", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "WebDevelopment2", "alt": "image", "title": "Підтримка створених сайтів", "text": ""},
+      {"id": "3", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "WebDevelopment3", "alt": "image", "title": "Додавання нового контенту", "text": ""},
+      {"id": "4", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-4@l", "src": "WebDevelopment4", "alt": "image", "title": "Оптимізація та редизайн", "text": ""}
     ]
   },{
     "id": "2",
+    "title": "Чому React такий крутий?",
+    "blocks": [
+      {"id": "1", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "ReactIsAwesome1", "alt": "image", "title": "Рендерінг на стороні клієнта", "text": ""},
+      {"id": "2", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "ReactIsAwesome2", "alt": "image", "title": "Компонентно-орієнтований", "text": ""},
+      {"id": "3", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "ReactIsAwesome3", "alt": "image", "title": "Декларативний", "text": ""},
+      {"id": "4", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "ReactIsAwesome4", "alt": "image", "title": "Можливість розробки нових функцій без переписування існуючого коду", "text": ""},
+      {"id": "5", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "ReactIsAwesome5", "alt": "image", "title": "Існує багато зовнішніх плагінів", "text": ""},
+      {"id": "6", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "ReactIsAwesome6", "alt": "image", "title": "Прекрасна офіційна документація", "text": ""}
+    ]
+  },{
+    "id": "3",
     "title": "Високоякісний веб-сайт має наступне:",
     "blocks": [
       {
@@ -39,7 +50,7 @@
       }
     ]
   },{
-    "id": "3",
+    "id": "4",
     "title": "Типи сайтів",
     "blocks": [
       {"id": "1", "ukWidth": "1-1 uk-width-1-2@m uk-width-1-3@l", "src": "TypesOfWebsites1", "alt": "image", "title": "Онлайн візитна картка", "text": "Невеликий сайт, який зазвичай складається з однієї або декількох веб-сторінок і базової інформації про організацію, приватну особу, компанію, товари або послуги, прайс-листи, контактну інформацію."},
@@ -48,17 +59,6 @@
       {"id": "4", "ukWidth": "1-1 uk-width-1-2@m uk-width-1-3@l", "src": "TypesOfWebsites4", "alt": "image", "title": "Блог", "text": "Основний контент - регулярно додавані записи, що містять текст, зображення або мультимедіа з можливістю публікації відгуків (коментарів) відвідувачів."},
       {"id": "5", "ukWidth": "1-1 uk-width-1-2@m uk-width-1-3@l", "src": "TypesOfWebsites5", "alt": "image", "title": "Галерея", "text": "Надає можливість перегляду різного мультимедійного і текстового контенту (списки, блоки, слайдери, зазвичай - з посиланнями на докладні версії)."},
       {"id": "6", "ukWidth": "1-1 uk-width-1-2@m uk-width-1-3@l", "src": "TypesOfWebsites6", "alt": "image", "title": "Інтернет магазин", "text": "Мета в торгівлі через Інтернет. Дозволяє користувачам переглядати асортимент товарів і послуг компанії з зображеннями, цінами, інформацією про технічні характеристики, використовувати різні зручні фільтри, створювати замовлення на покупку, обирати способи оплати та доставки замовлення, оплачувати замовлення."}
-    ]
-  },{
-    "id": "4",
-    "title": "Про що думає клієнт, перш ніж замовити?",
-    "blocks": [
-      {"id": "1", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "BeforeOrdering1", "alt": "image", "title": "Навіщо мені потрібен веб-сайт?", "text": ""},
-      {"id": "2", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "BeforeOrdering2", "alt": "image", "title": "Що саме я хочу опублікувати?", "text": ""},
-      {"id": "3", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "BeforeOrdering3", "alt": "image", "title": "Які сторінки мені потрібні?", "text": ""},
-      {"id": "4", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "BeforeOrdering4", "alt": "image", "title": "Чи потрібен мені зворотній зв\"язок від клієнтів?", "text": ""},
-      {"id": "5", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "BeforeOrdering5", "alt": "image", "title": "В якому кольорі (кольорах) мені потрібен сайт?", "text": ""},
-      {"id": "6", "ukWidth": "1-1 uk-width-1-2@s uk-width-1-3@m", "src": "BeforeOrdering6", "alt": "image", "title": "Де я планую розмістити сайт?", "text": ""}
     ]
   }
 ]
