@@ -5,7 +5,7 @@
 /build
 
 # production
-# /prod
+/prod
 
 # mistake from master
 /src/build

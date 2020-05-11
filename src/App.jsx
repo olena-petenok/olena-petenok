@@ -15,7 +15,7 @@ function App() {
         <Route exact path='/about-author'><Page page={'aboutAuthor'} /></Route>
         <Route exact path='/about-author/ua'><Page page={'aboutAuthor'} language={'ua'} /></Route>
         <Route exact path='/about-author/ru'><Page page={'aboutAuthor'} language={'ru'} /></Route>
-        <Route path='*'><Page /></Route>
+        <Route path='*'><NotFound /></Route>
       </Switch>
     </Router>
   );
