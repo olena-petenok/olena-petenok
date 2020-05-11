@@ -7,7 +7,7 @@ import PortraitImage from '../../images/about-author/portrait.jpg';
 
 function PhotoAboutAuthor() {
   return (
-    <section className="uk-width-1-1 uk-width-1-3@s">
+    <section className="uk-width-1-1 uk-width-1-4@s">
       <div className="portrait-image-block">
         <div className="portrait-image-shadow">
           <img src={`/${PortraitImage}`} alt="portrait" className="portrait-image parallelogram-block-shadow" />

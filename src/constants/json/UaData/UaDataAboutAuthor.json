@@ -1,57 +1,79 @@
 [
   {
     "id": "1",
-    "ukWidth": "1-1 uk-width-2-3@s",
-    "title": "Навички програмування",
+    "ukWidth": "1-1 uk-width-3-4@s",
+    "title": "Навички",
     "blocks": [
       {
         "id": "1",
         "ukWidth": "1-1 uk-width-1-2@l",
-        "subtitle": "Front-end",
+        "subtitle": "ЖОРСТКІ",
         "text": [
-          {"id": "1", "value": "HTML5, CSS3, SASS", "href": ""},
-          {"id": "2", "value": "JS, ES6, Babel", "href": ""},
-          {"id": "3", "value": "React, UIkit, Bootstrap, Angular 1.X", "href": ""},
-          {"id": "4", "value": "Webpack, Npm, Yarn", "href": ""}
+          {"id": "1", "value": "REACT, JS/ES6", "href": ""},
+          {"id": "2", "value": "HTML5, CSS3/SCSS/SASS, UIKIT", "href": ""},
+          {"id": "3", "value": "Webpack, npm/yarn", "href": ""}
         ]
       },{
         "id": "2",
         "ukWidth": "1-1 uk-width-1-2@l",
-        "subtitle": "Інші мови",
+        "subtitle": "М'ЯКІ",
         "text": [
-          {"id": "1", "value": "Певний досвід: C++, Java", "href": ""},
-          {"id": "2", "value": "Базові знання: python, C#, php", "href": ""}
-        ]
-      },{
-        "id": "3",
-        "ukWidth": "1-1 uk-width-1-2@l",
-        "subtitle": "SEO",
-        "text": [
-          {"id": "1", "value": "Googlebot: базові знання механіки серфінгу", "href": ""}
-        ]
-      },{
-        "id": "4",
-        "ukWidth": "1-1 uk-width-1-2@l",
-        "subtitle": "Бази даних",
-        "text": [
-          {"id": "1", "value": "MongoDB, MySQL", "href": ""}
+          {"id": "1", "value": "Критичне мислення", "href": ""},
+          {"id": "2", "value": "Незалежність", "href": ""},
+          {"id": "3", "value": "Ентузіазм", "href": ""}
         ]
       }
     ]
   },{
     "id": "2",
     "ukWidth": "1-1 uk-width-1-2@m",
-    "title": "Freelance проекти",
+    "title": "Проекти",
     "blocks": [
       {
         "id": "1",
         "ukWidth": "1-1 uk-width-1-1@l",
         "subtitle": "",
         "text": [
-          {"id": "1", "value": "Git профіль", "href": "https://github.com/olena-petenok"}
+          {"id": "1", "value": "GIT ПРОФІЛЬ", "href": "https://github.com/olena-petenok"}
         ]
       },{
         "id": "2",
+        "ukWidth": "1-1 uk-width-1-2@l",
+        "subtitle": "2019 - 2020",
+        "text": [
+          {"id": "1", "value": "Персональний сайт CV", "href": ""},
+          {"id": "2", "value": "Саме цей сайт :)", "href": ""},
+          {"id": "3", "value": "UI/UX розроблені", "href": ""}
+        ]
+      },{
+        "id": "3",
+        "ukWidth": "1-1 uk-width-1-2@l",
+        "subtitle": "Технологічний стек",
+        "text": [
+          {"id": "1", "value": "React, React Router", "href": ""},
+          {"id": "2", "value": "Webpack, yarn", "href": ""},
+          {"id": "3", "value": "UIkit 3, SASS, HTML5", "href": ""}
+        ]
+      },{
+        "id": "4",
+        "ukWidth": "1-1 uk-width-1-2@l",
+        "subtitle": "2019",
+        "text": [
+          {"id": "1", "value": "Innocamp Список справ", "href": ""},
+          {"id": "2", "value": "Версія на hook-ах", "href": "https://github.com/olena-petenok/innocamp-to-do-list-react-hooks"},
+          {"id": "3", "value": "Версія на класах", "href": "https://github.com/olena-petenok/innocamp-to-do-list-react-classes"}
+        ]
+      },{
+        "id": "5",
+        "ukWidth": "1-1 uk-width-1-2@l",
+        "subtitle": "Технологічний стек",
+        "text": [
+          {"id": "1", "value": "React", "href": ""},
+          {"id": "2", "value": "Webpack, npm", "href": ""},
+          {"id": "3", "value": "SCSS, HTML5", "href": ""}
+        ]
+      },{
+        "id": "6",
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "2017",
         "text": [
@@ -59,51 +81,33 @@
           {"id": "2", "value": "UI/UX розроблені", "href": ""}
         ]
       },{
-        "id": "3",
+        "id": "7",
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "Технологічний стек",
         "text": [
-          {"id": "1", "value": "HTML5, CSS3, JS, UIkit 2, jQuery 3.2, Angular 1.6, php, MySQL", "href": ""}
+          {"id": "1", "value": "HTML5, CSS3, UIkit 2", "href": ""},
+          {"id": "2", "value": "JS, jQuery, Angular 1.X", "href": ""},
+          {"id": "3", "value": "php, MySQL", "href": ""}
         ]
       }
     ]
   },{
     "id": "3",
     "ukWidth": "1-1 uk-width-1-2@m",
-    "title": "Мови",
-    "blocks": [
-      {
-        "id": "1",
-        "ukWidth": "1-1 uk-width-1-2@l",
-        "subtitle": "English: мінімум B2",
-        "text": [
-          {"id": "1", "value": "IELTS (Academic), 2016", "href": "../pdf/petenok-olena-ielts.pdf"}
-        ]
-      },{
-        "id": "2",
-        "ukWidth": "1-1 uk-width-1-2@l",
-        "subtitle": "Вільне володіння",
-        "text": [
-          {"id": "1", "value": "Українська, Російська", "href": ""}
-        ]
-      }
-    ]
-  },{
-    "id": "4",
-    "ukWidth": "1-1 uk-width-1-2@m",
-    "title": "Освіта",
+    "title": "Education",
     "blocks": [
       {
         "id": "1",
         "ukWidth": "1-1",
-        "subtitle": "",
+        "subtitle": "Жовтень 2019, Innocamp by Inovecs",
         "text": [
-          {"id": "1", "value": "Національний технічний університет України \"Київський політехнічний інститут імені Ігоря Сікорського\", кафедра системного проектування навчально-наукового комплексу \"Інститут прикладного системного аналізу\"", "href": ""}
+          {"id": "1", "value": "Тренувальний трек з Front-end", "href": ""},
+          {"id": "2", "value": "Свідоцтво про закінчення", "href": "../pdf/petenok-olena-innocamp-certificate.pdf"}
         ]
       },{
         "id": "2",
         "ukWidth": "1-1 uk-width-1-2@l",
-        "subtitle": "Ступінь магістра, 2018",
+        "subtitle": "2018, Ступінь магістра",
         "text": [
           {"id": "1", "value": "Системне проектування сервісів", "href": ""},
           {"id": "2", "value": "Диплом з відзнакою", "href": "../pdf/petenok-olena-masters-diploma.pdf"},
@@ -113,95 +117,62 @@
       },{
         "id": "3",
         "ukWidth": "1-1 uk-width-1-2@l",
-        "subtitle": "Ступінь бакалавра, 2017",
+        "subtitle": "2017, Ступінь бакалавра",
         "text": [
-          {"id": "1", "value": "Комп\"ютерні науки", "href": ""},
+          {"id": "1", "value": "Комп'ютерні науки", "href": ""},
           {"id": "2", "value": "Диплом", "href": "../pdf/petenok-olena-bachelors-diploma.pdf"},
           {"id": "3", "value": "Презентація", "href": "../pdf/petenok-olena-bachelors-diploma-presentation.pdf"},
           {"id": "4", "value": "Проект", "href": "../pdf/petenok-olena-bachelors-diploma-project.pdf"}
+        ]
+      },{
+        "id": "4",
+        "ukWidth": "1-1",
+        "subtitle": "",
+        "text": [
+          {"id": "1", "value": "Національний технічний університет України \"Київський політехнічний інститут імені Ігоря Сікорського\", кафедра системного проектування навчально-наукового комплексу \"Інститут прикладного системного аналізу\"", "href": ""}
+        ]
+      }
+    ]
+  },{
+    "id": "4",
+    "ukWidth": "1-1 uk-width-1-2@m",
+    "title": "Мови",
+    "blocks": [
+      {
+        "id": "1",
+        "ukWidth": "1-1 uk-width-1-2@l",
+        "subtitle": "Англійська: B2",
+        "text": [
+          {"id": "1", "value": "2016, IELTS (Academic)", "href": "../pdf/petenok-olena-ielts.pdf"}
+        ]
+      },{
+        "id": "2",
+        "ukWidth": "1-1 uk-width-1-2@l",
+        "subtitle": "Носій мови",
+        "text": [
+          {"id": "1", "value": "Українська", "href": ""},
+          {"id": "2", "value": "Російська", "href": ""}
         ]
       }
     ]
   },{
     "id": "5",
     "ukWidth": "1-1 uk-width-1-2@m",
-    "title": "Публікації",
+    "title": "Додаткові навички",
     "blocks": [
       {
         "id": "1",
-        "ukWidth": "1-1",
-        "subtitle": "",
+        "ukWidth": "1-1 uk-width-1-2@l",
+        "subtitle": "Програмування",
         "text": [
-          {"id": "1", "value": "Онлайн конференція “Innovations in Science and Technology”", "href": ""}
+          {"id": "1", "value": "Мала певний досвід в університеті з: C++, Java, python, C#, php, MongoDB, MySQL", "href": ""}
         ]
       },{
         "id": "2",
-        "ukWidth": "1-1 uk-width-1-2@l",
-        "subtitle": "2016",
-        "text": [
-          {"id": "1", "value": "Ecosystem as simulation modeling system", "href": ""},
-          {"id": "2", "value": "Читати", "href": "http://konfist.fl.kpi.ua/sites/default/files/part_ii.pdf#page=142"}
-        ]
-      },{
-        "id": "3",
-        "ukWidth": "1-1 uk-width-1-2@l",
-        "subtitle": "2015",
-        "text": [
-          {"id": "1", "value": "Good style of code writing in Object-oriented programming languages", "href": ""},
-          {"id": "2", "value": "Читати", "href": "http://konfist.fl.kpi.ua/sites/default/files/part_2_0.pdf#page=89"}
-        ]
-      }
-    ]
-  },{
-    "id": "6",
-    "ukWidth": "1-1 uk-width-1-2@m",
-    "title": "Інші навички",
-    "blocks": [
-      {
-        "id": "1",
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "Управління проектами",
         "text": [
-          {"id": "1", "value": "Пройшла курс управління проектами в університеті. Розумію принципи послідовної та Agile / Scrum розробок. Маю базове розуміння управління часом і ризиками.", "href": ""}
-        ]
-      },{
-        "id": "2",
-        "ukWidth": "1-1 uk-width-1-2@l",
-        "subtitle": "Досвід підготовки документації",
-        "text": [
-          {"id": "1", "value": "Технічне завдання", "href": ""},
-          {"id": "2", "value": "Специфікація вимог до програмного забезпечення", "href": ""}
-        ]
-      }
-    ]
-  },{
-    "id": "7",
-    "ukWidth": "1-1 uk-width-1-2@m",
-    "title": "Додаткова інформація",
-    "blocks": [
-      {
-        "id": "1",
-        "ukWidth": "1-1 uk-width-1-2@l",
-        "subtitle": "Особисті якості",
-        "text": [
-          {"id": "1", "value": "креативність", "href": ""},
-          {"id": "2", "value": "відповідальність", "href": ""},
-          {"id": "3", "value": "уважність", "href": ""}
-        ]
-      },{
-        "id": "2",
-        "ukWidth": "1-1 uk-width-1-2@l",
-        "subtitle": "Навчалася в художній школі",
-        "text": [
-          {"id": "1", "value": "Художня школа №3", "href": ""},
-          {"id": "2", "value": "Київ, Оболонь", "href": ""}
-        ]
-      },{
-        "id": "3",
-        "ukWidth": "1-1 uk-width-1-2@l",
-        "subtitle": "Вік",
-        "text": [
-          {"id": "1", "value": "23", "href": ""}
+          {"id": "1", "value": "Розумію принципи Agile/Scrum розробки та керування часом.", "href": ""}
         ]
       }
     ]
