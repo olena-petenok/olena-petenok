@@ -20,7 +20,10 @@ function HeaderLink(props) {
 function HeaderLanguageLink(props) {
   return (
     <li className={`language-item text-item-colors-underline ${props.active}`}>
-      <Link to={props.href} className="language-item-link text-item-colors-underline-link">{props.value}</Link>
+      <Link to={props.href} onClick={props.closeSmallMenu}
+            className="language-item-link text-item-colors-underline-link">
+        {props.value}
+      </Link>
     </li>
   );
 }
@@ -67,7 +70,7 @@ function HeaderMenuSmallSpan(props) {
 function HeaderMenuSmallSpanLink(props) {
   return (
     <li className="item text-item-colors-underline">
-      <Link to={props.href} className="text-item-colors-underline-link">
+      <Link to={props.href} className="text-item-colors-underline-link" onClick={props.closeSmallMenu}>
         <span className="icon" uk-icon={props.icon}></span>
         {props.value}
       </Link>
@@ -78,7 +81,7 @@ function HeaderMenuSmallSpanLink(props) {
 function HeaderMenuSmallSpanLinkExternal(props) {
   return (
     <li className="item text-item-colors-underline">
-      <a href={props.href} target="_blank" className="text-item-colors-underline-link">
+      <a href={props.href} target="_blank" className="text-item-colors-underline-link" onClick={props.closeSmallMenu}>
         <span className="icon" uk-icon={props.icon}></span>
         {props.value}
       </a>
@@ -90,8 +93,10 @@ function HeaderMenuSmallItems(props) {
   const links = useContext(HeaderContext).linksSmall.map(item => {
     const { id, icon, value, href, external } = item;
     if (href === "") { return ( <HeaderMenuSmallSpan key={id} icon={icon} value={value} /> ); }
-    else if (external === "") { return ( <HeaderMenuSmallSpanLink key={id} href={href} icon={icon} value={value} /> ); }
-    else { return ( <HeaderMenuSmallSpanLinkExternal key={id} href={href} icon={icon} value={value} /> ); }
+    else if (external === "") { return ( <HeaderMenuSmallSpanLink key={id} href={href} icon={icon} value={value}
+                                                                  closeSmallMenu={props.closeSmallMenu} /> ); }
+    else { return ( <HeaderMenuSmallSpanLinkExternal key={id} href={href} icon={icon} value={value}
+                                                     closeSmallMenu={props.closeSmallMenu} /> ); }
   });
 
   return (
@@ -117,10 +122,18 @@ function HeaderLogics(props) {
     setOpened(previousOpened => !previousOpened);
   };
 
+  const closeSmallMenu = () => {
+    if(opened) {
+      closeMobileMenu();
+      setOpened(false);
+    }
+  };
+
   const languagesArray = props.languages.map(item => {
     const { id, value, href } = item;
     return ( <HeaderLanguageLink key={id} value={value} active={language === value ? 'active' : ''}
-                                 href={`${page === '/' ? '/' : `/${page}/`}${href}`} /> );
+                                 href={`${page === '/' ? '/' : `/${page}/`}${href}`}
+                                 closeSmallMenu={closeSmallMenu} /> );
   });
 
   return (
@@ -129,7 +142,7 @@ function HeaderLogics(props) {
         <div className="header-align">
           <HeaderLogo links={logo} language={language} />
           <HeaderMenu languages={languagesArray} page={page} />
-          <HeaderMenuSmallItems languages={languagesArray} />
+          <HeaderMenuSmallItems languages={languagesArray} closeSmallMenu={closeSmallMenu} />
           <div className="menu-icon-container">
             <div className="menu-icon" onClick={onIconClicked}></div>
           </div>
