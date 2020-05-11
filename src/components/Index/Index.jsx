@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import './index.sass';
 import { indexLanguages, IndexContext } from './IndexContext';
 
-function VerticalIndexBlockText(props) { return ( <p>{props.value}</p> ); }
+function VerticalIndexBlockText(props) { return ( <p className="element-text">{props.value}</p> ); }
 
 function VerticalIndexBlock(props) {
   let text = '';

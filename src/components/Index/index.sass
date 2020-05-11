@@ -1,3 +1,4 @@
+@import '../../constants/styles/fonts.sass'
 @import '../../constants/styles/colors.sass'
 @import '../../constants/styles/media-data.sass'
 
@@ -38,18 +39,18 @@
         margin-bottom: 10px
 
   .block-title
-    font-size: 36px
+    font-size: 55px
+    font-family: $logo-font
     color: $main-text-color
     margin-top: 80px
     margin-bottom: 0px
     @media ($media-max-width: $media-large-screen)
-      font-size: 32px
+      font-size: 48px
     @media ($media-max-width: $media-medium-screen)
       margin-top: 50px
-      font-size: 28px
+      font-size: 40px
     @media ($media-max-width: $media-small-screen)
       margin-top: 30px
-      font-size: 26px
 
   .element-round-image
     padding-top: 10px
@@ -62,4 +63,7 @@
     padding-top: 20px
     padding-bottom: 10px
     font-weight: bold
+    font-size: 20px
+
+  .element-text
     font-size: 18px
