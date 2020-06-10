@@ -9,9 +9,9 @@
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "ЖОРСТКІ",
         "text": [
-          {"id": "1", "value": "REACT, JS/ES6", "href": ""},
-          {"id": "2", "value": "HTML5, CSS3/SCSS/SASS, UIKIT", "href": ""},
-          {"id": "3", "value": "Webpack, npm/yarn", "href": ""}
+          {"id": "1", "value": "REACT, JS / ES11", "href": ""},
+          {"id": "2", "value": "HTML5, CSS3 / SCSS / SASS, UIKIT", "href": ""},
+          {"id": "3", "value": "Webpack, npm / yarn", "href": ""}
         ]
       },{
         "id": "2",
@@ -20,7 +20,7 @@
         "text": [
           {"id": "1", "value": "Критичне мислення", "href": ""},
           {"id": "2", "value": "Незалежність", "href": ""},
-          {"id": "3", "value": "Ентузіазм", "href": ""}
+          {"id": "3", "value": "Неупередженість", "href": ""}
         ]
       }
     ]
@@ -99,7 +99,7 @@
       {
         "id": "1",
         "ukWidth": "1-1",
-        "subtitle": "Жовтень 2019, Innocamp by Inovecs",
+        "subtitle": "Жовтень 2019, Innocamp by Innovecs",
         "text": [
           {"id": "1", "value": "Тренувальний трек з Front-end", "href": ""},
           {"id": "2", "value": "Свідоцтво про закінчення", "href": "../pdf/petenok-olena-innocamp-certificate.pdf"}
@@ -172,7 +172,7 @@
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "Управління проектами",
         "text": [
-          {"id": "1", "value": "Розумію принципи Agile/Scrum розробки та керування часом.", "href": ""}
+          {"id": "1", "value": "Розумію принципи Agile/Scrum розробки та керування часом", "href": ""}
         ]
       }
     ]

@@ -9,9 +9,9 @@
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "ЖЕСТКИЕ",
         "text": [
-          {"id": "1", "value": "REACT, JS/ES6", "href": ""},
-          {"id": "2", "value": "HTML5, CSS3/SCSS/SASS, UIKIT", "href": ""},
-          {"id": "3", "value": "Webpack, npm/yarn", "href": ""}
+          {"id": "1", "value": "REACT, JS / ES11", "href": ""},
+          {"id": "2", "value": "HTML5, CSS3 / SCSS / SASS, UIKIT", "href": ""},
+          {"id": "3", "value": "Webpack, npm / yarn", "href": ""}
         ]
       },{
         "id": "2",
@@ -20,7 +20,7 @@
         "text": [
           {"id": "1", "value": "Критическое мышление", "href": ""},
           {"id": "2", "value": "Независимость", "href": ""},
-          {"id": "3", "value": "Энтузиазм", "href": ""}
+          {"id": "3", "value": "Непредубежденность", "href": ""}
         ]
       }
     ]
@@ -99,7 +99,7 @@
       {
         "id": "1",
         "ukWidth": "1-1",
-        "subtitle": "Октябрь 2019, Innocamp by Inovecs",
+        "subtitle": "Октябрь 2019, Innocamp by Innovecs",
         "text": [
           {"id": "1", "value": "Тренировочный трек по Front-end", "href": ""},
           {"id": "2", "value": "Сертификат об окончании", "href": "../pdf/petenok-olena-innocamp-certificate.pdf"}
@@ -172,7 +172,7 @@
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "Управление проектами",
         "text": [
-          {"id": "1", "value": "Понимаю принципы Agile/Scrum разработки и управления временем.", "href": ""}
+          {"id": "1", "value": "Понимаю принципы Agile/Scrum разработки и управления временем", "href": ""}
         ]
       }
     ]

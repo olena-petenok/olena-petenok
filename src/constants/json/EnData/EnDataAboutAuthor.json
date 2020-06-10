@@ -9,9 +9,9 @@
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "HARD",
         "text": [
-          {"id": "1", "value": "REACT, JS/ES6", "href": ""},
-          {"id": "2", "value": "HTML5, CSS3/SCSS/SASS, UIKIT", "href": ""},
-          {"id": "3", "value": "Webpack, npm/yarn", "href": ""}
+          {"id": "1", "value": "REACT, JS / ES11", "href": ""},
+          {"id": "2", "value": "HTML5, CSS3 / SCSS / SASS, UIKIT", "href": ""},
+          {"id": "3", "value": "Webpack, npm / yarn", "href": ""}
         ]
       },{
         "id": "2",
@@ -20,7 +20,7 @@
         "text": [
           {"id": "1", "value": "Critical thinking", "href": ""},
           {"id": "2", "value": "Independence", "href": ""},
-          {"id": "3", "value": "Enthusiasm", "href": ""}
+          {"id": "3", "value": "Open-mindedness", "href": ""}
         ]
       }
     ]
@@ -99,7 +99,7 @@
       {
         "id": "1",
         "ukWidth": "1-1",
-        "subtitle": "October 2019, Innocamp by Inovecs",
+        "subtitle": "October 2019, Innocamp by Innovecs",
         "text": [
           {"id": "1", "value": "Front-end Training Track", "href": ""},
           {"id": "2", "value": "Certificate of completion", "href": "../pdf/petenok-olena-innocamp-certificate.pdf"}
@@ -172,7 +172,7 @@
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "Project Management",
         "text": [
-          {"id": "1", "value": "Understand the principles of Agile/Scrum development and time management.", "href": ""}
+          {"id": "1", "value": "Understand the principles of Agile/Scrum development and time management", "href": ""}
         ]
       }
     ]
