@@ -6,15 +6,15 @@ import Footer from '../Footer/Footer';
 import Index from '../Index/Index';
 import AboutAuthor from '../AboutAuthor/AboutAuthor';
 
+import DataDocumentTitles from '../../constants/json/SharedData/DataDocumentTitles.json';
+
 // import { setInLocalStorage } from '../../utils/helper.js';
 
 function Page(props) {
   const { language, page } = props;
+  const titles = DataDocumentTitles;
 
-  // useEffect(() => {
-  //   document.title = `The language is: ${language}, the page is: ${page}`;
-  // }, [language, page]);
-
+  useEffect(() => { document.title = `${titles[page][language] || titles['default']['default']}`; }, [language, page]);
   // useEffect(() => { setInLocalStorage("language", language); }, [language]);
   // useEffect(() => { setInLocalStorage("page", page); }, [page]);
 
