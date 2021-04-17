@@ -9,13 +9,31 @@
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "ЖЕСТКИЕ",
         "text": [
-          { "id": "1", "value": "REACT, JS / ES11", "href": "" },
           {
-            "id": "2",
-            "value": "HTML5, CSS3 / SCSS / SASS, UIKIT",
+            "id": "1",
+            "value": "JS (REST APIs, WebSockets), ES2021",
             "href": ""
           },
-          { "id": "3", "value": "Webpack, npm / yarn", "href": "" }
+          {
+            "id": "2",
+            "value": "React (hooks, Redux, Router)",
+            "href": ""
+          },
+          {
+            "id": "3",
+            "value": "Принципы SOLID, DRY, KISS",
+            "href": ""
+          },
+          {
+            "id": "4",
+            "value": "Adaptive layout, SASS",
+            "href": ""
+          },
+          {
+            "id": "5",
+            "value": "Webpack, npm / yarn",
+            "href": ""
+          }
         ]
       },
       {
@@ -23,9 +41,11 @@
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "МЯГКИЕ",
         "text": [
-          { "id": "1", "value": "Критическое мышление", "href": "" },
-          { "id": "2", "value": "Независимость", "href": "" },
-          { "id": "3", "value": "Непредубежденность", "href": "" }
+          {
+            "id": "1",
+            "value": "Критическое мышление, независимость, непредубежденность. Алгоритмические, аналитические навыки и навыки решения проблем. Опыт построения архитектуры приложений.",
+            "href": ""
+          }
         ]
       }
     ]
@@ -35,6 +55,18 @@
     "ukWidth": "1-1 uk-width-1-2@m",
     "title": "Проекты",
     "blocks": [
+      {
+        "id": "0",
+        "ukWidth": "1-1 uk-width-1-1@l",
+        "subtitle": "React Front-end разработчик, 2020 - 2021",
+        "text": [
+          {
+            "id": "1",
+            "value": "Должность в BorisDoes (Австралийский рынок труда)",
+            "href": ""
+          }
+        ]
+      },
       {
         "id": "1",
         "ukWidth": "1-1 uk-width-1-1@l",
