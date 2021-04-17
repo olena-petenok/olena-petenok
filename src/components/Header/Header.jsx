@@ -1,26 +1,21 @@
 import React, { useState, useContext } from "react";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-import "./header.sass";
 import { headerLanguages, HeaderContext } from "./HeaderContext";
 import { openMobileMenu, closeMobileMenu } from "../../utils/helper.js";
 
 import DataLogoLinks from "../../constants/json/SharedData/DataLogoLinks.json";
 import DataMenuLanguageLinks from "../../constants/json/SharedData/DataMenuLanguageLinks.json";
 
-function HeaderLink(props) {
-  return (
-    <li className={`menu-item text-item-colors-underline ${props.active}`}>
-      <Link
-        to={props.href}
-        className="menu-item-link text-item-colors-underline-link"
-      >
-        {props.value}
-      </Link>
-    </li>
-  );
-}
+import "./header.sass";
+
+const HeaderLink = ({ active, href = "", value = "" }) => (
+  <li className={`menu-item text-item-colors-underline ${active}`}>
+    <Link to={href} className="menu-item-link text-item-colors-underline-link">
+      {value}
+    </Link>
+  </li>
+);
 
 function HeaderLanguageLink(props) {
   return (
@@ -173,8 +168,8 @@ function HeaderMenuSmallItems(props) {
   );
 }
 
-function HeaderLogics(props) {
-  const { logo, languages, language, page } = props;
+const HeaderLogics = (props) => {
+  const { logo, language, page } = props;
   const [opened, setOpened] = useState(false);
 
   const onIconClicked = () => {
@@ -189,46 +184,39 @@ function HeaderLogics(props) {
     }
   };
 
-  const languagesArray = props.languages.map((item) => {
-    const { id, value, href } = item;
-    return (
-      <HeaderLanguageLink
-        key={id}
-        value={value}
-        active={language === value ? "active" : ""}
-        href={`${page === "/" ? "/" : `/${page}/`}${href}`}
-        closeSmallMenu={closeSmallMenu}
-      />
-    );
-  });
+  const languagesArray = DataMenuLanguageLinks.map((item) => (
+    <HeaderLanguageLink
+      key={item?.id}
+      value={item?.value}
+      active={language === item?.value ? "active" : ""}
+      href={`${page === "/" ? "/" : `/${page}/`}${item?.href}`}
+      closeSmallMenu={closeSmallMenu}
+    />
+  ));
 
   return (
     <header className="header-background">
       <div className="uk-container">
         <div className="header-align">
           <HeaderLogo links={logo} language={language} />
+
           <HeaderMenu languages={languagesArray} page={page} />
+
           <HeaderMenuSmallItems
             languages={languagesArray}
             closeSmallMenu={closeSmallMenu}
           />
-          <div className="menu-icon-container">
-            <div className="menu-icon" onClick={onIconClicked}></div>
+
+          <div className="menu-icon-container" onClick={onIconClicked}>
+            <div className="menu-icon"></div>
           </div>
         </div>
       </div>
     </header>
   );
-}
+};
 
-function Header(props) {
-  const languages = {
-    en: headerLanguages.en,
-    ua: headerLanguages.ua,
-    ru: headerLanguages.ru,
-    default: headerLanguages.en,
-  };
-
+const Header = ({ language = "en", page = "index" }) => {
   const pages = {
     index: "/",
     aboutAuthor: "about-author",
@@ -236,20 +224,14 @@ function Header(props) {
   };
 
   return (
-    <HeaderContext.Provider
-      value={languages[props.language] || languages["default"]}
-    >
+    <HeaderContext.Provider value={headerLanguages[language]}>
       <HeaderLogics
         logo={DataLogoLinks}
-        languages={DataMenuLanguageLinks}
-        language={props.language}
-        page={pages[props.page] || pages["default"]}
+        language={language}
+        page={pages[page]}
       />
     </HeaderContext.Provider>
   );
-}
-
-Header.propTypes = { language: PropTypes.string, page: PropTypes.string };
-Header.defaultProps = { language: "en", page: "index" };
+};
 
 export default Header;
