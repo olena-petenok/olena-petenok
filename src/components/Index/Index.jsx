@@ -1,15 +1,22 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 
-import './index.sass';
-import { indexLanguages, IndexContext } from './IndexContext';
+import "./index.sass";
+import { indexLanguages, IndexContext } from "./IndexContext";
 
-function VerticalIndexBlockText(props) { return ( <p className="element-text">{props.value}</p> ); }
+function VerticalIndexBlockText(props) {
+  return <p className="element-text">{props.value}</p>;
+}
 
 function VerticalIndexBlock(props) {
-  let text = '';
-  if (typeof props.text === "undefined") { }
-  else if (typeof props.text === "string") { text = <VerticalIndexBlockText value={props.text} /> }
-  else { text = props.text.map(item => <VerticalIndexBlockText key={item.id} value={item.value} /> ); }
+  let text = "";
+  if (typeof props.text === "undefined") {
+  } else if (typeof props.text === "string") {
+    text = <VerticalIndexBlockText value={props.text} />;
+  } else {
+    text = props.text.map((item) => (
+      <VerticalIndexBlockText key={item.id} value={item.value} />
+    ));
+  }
 
   return (
     <div className={`uk-width-${props.ukWidth}`}>
@@ -23,10 +30,16 @@ function VerticalIndexBlock(props) {
 }
 
 function HorizontalIndexBlock(props) {
-  const blocks = props.blocks.map(item =>
-    <VerticalIndexBlock key={item.id} ukWidth={item.ukWidth} src={item.src} alt={item.alt}
-                        title={item.title} text={item.text}/>
-  );
+  const blocks = props.blocks.map((item) => (
+    <VerticalIndexBlock
+      key={item.id}
+      ukWidth={item.ukWidth}
+      src={item.src}
+      alt={item.alt}
+      title={item.title}
+      text={item.text}
+    />
+  ));
 
   return (
     <div className="uk-container">
@@ -41,23 +54,29 @@ function HorizontalIndexBlock(props) {
 }
 
 function IndexLogics(props) {
-  const sections = useContext(IndexContext).index.map(item =>
-    <HorizontalIndexBlock key={item.id} title={item.title} blocks={item.blocks} />
-  );
+  const sections = useContext(IndexContext).index.map((item) => (
+    <HorizontalIndexBlock
+      key={item.id}
+      title={item.title}
+      blocks={item.blocks}
+    />
+  ));
 
-  return ( <section className="main-background services">{sections}</section> );
+  return <section className="main-background services">{sections}</section>;
 }
 
 function Index(props) {
   const languages = {
-    'en': indexLanguages.en,
-    'ua': indexLanguages.ua,
-    'ru': indexLanguages.ru,
-    'default': indexLanguages.en
+    en: indexLanguages.en,
+    ua: indexLanguages.ua,
+    ru: indexLanguages.ru,
+    default: indexLanguages.en,
   };
 
   return (
-    <IndexContext.Provider value={languages[props.language] || languages['default']}>
+    <IndexContext.Provider
+      value={languages[props.language] || languages["default"]}
+    >
       <IndexLogics />
     </IndexContext.Provider>
   );

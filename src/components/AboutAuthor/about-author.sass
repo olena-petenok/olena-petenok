@@ -4,11 +4,14 @@
 
 .about-author
   .portrait-image-block
-    padding-top: 70px
-    margin-top: 10px
+    -webkit-transition: 450ms cubic-bezier(0.75,.1,.25,.9)
+      -moz-transition:    450ms cubic-bezier(0.75,.1,.25,.9)
+      -ms-transition:     450ms cubic-bezier(0.75,.1,.25,.9)
+      -o-transition:      450ms cubic-bezier(0.75,.1,.25,.9)
+      transition:         450ms cubic-bezier(0.75,.1,.25,.9)
+    padding-top: 80px
     &:hover
-      margin-top: 0px
-      margin-bottom: 10px
+     transform: scale(1.05);
     @media ($media-max-width: $media-medium-screen)
       padding-top: 40px
     @media ($media-max-width: $media-small-screen)

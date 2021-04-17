@@ -1,5 +1,5 @@
 [
-  {"id": "1", "href": "", "value": "en"},
-  {"id": "2", "href": "ua", "value": "ua"},
-  {"id": "3", "href": "ru", "value": "ru"}
+  { "id": "1", "href": "", "value": "en" },
+  { "id": "2", "href": "ua", "value": "ua" },
+  { "id": "3", "href": "ru", "value": "ru" }
 ]

@@ -9,22 +9,28 @@
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "HARD",
         "text": [
-          {"id": "1", "value": "REACT, JS / ES11", "href": ""},
-          {"id": "2", "value": "HTML5, CSS3 / SCSS / SASS, UIKIT", "href": ""},
-          {"id": "3", "value": "Webpack, npm / yarn", "href": ""}
+          { "id": "1", "value": "REACT, JS / ES11", "href": "" },
+          {
+            "id": "2",
+            "value": "HTML5, CSS3 / SCSS / SASS, UIKIT",
+            "href": ""
+          },
+          { "id": "3", "value": "Webpack, npm / yarn", "href": "" }
         ]
-      },{
+      },
+      {
         "id": "2",
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "SOFT",
         "text": [
-          {"id": "1", "value": "Critical thinking", "href": ""},
-          {"id": "2", "value": "Independence", "href": ""},
-          {"id": "3", "value": "Open-mindedness", "href": ""}
+          { "id": "1", "value": "Critical thinking", "href": "" },
+          { "id": "2", "value": "Independence", "href": "" },
+          { "id": "3", "value": "Open-mindedness", "href": "" }
         ]
       }
     ]
-  },{
+  },
+  {
     "id": "2",
     "ukWidth": "1-1 uk-width-1-2@m",
     "title": "Projects",
@@ -34,64 +40,87 @@
         "ukWidth": "1-1 uk-width-1-1@l",
         "subtitle": "",
         "text": [
-          {"id": "1", "value": "GIT PROFILE", "href": "https://github.com/olena-petenok"}
+          {
+            "id": "1",
+            "value": "GIT PROFILE",
+            "href": "https://github.com/olena-petenok"
+          }
         ]
-      },{
+      },
+      {
         "id": "2",
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "2019 - 2020",
         "text": [
-          {"id": "1", "value": "Personal CV Website", "href": ""},
-          {"id": "2", "value": "This very one :)", "href": ""},
-          {"id": "3", "value": "UI/UX designed", "href": ""}
+          { "id": "1", "value": "Personal CV Website", "href": "" },
+          { "id": "2", "value": "This very one :)", "href": "" },
+          { "id": "3", "value": "UI/UX designed", "href": "" }
         ]
-      },{
+      },
+      {
         "id": "3",
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "Tech stack",
         "text": [
-          {"id": "1", "value": "React, React Router", "href": ""},
-          {"id": "2", "value": "Webpack, yarn", "href": ""},
-          {"id": "3", "value": "UIkit 3, SASS, HTML5", "href": ""}
+          { "id": "1", "value": "React, React Router", "href": "" },
+          { "id": "2", "value": "Webpack, yarn", "href": "" },
+          { "id": "3", "value": "UIkit 3, SASS, HTML5", "href": "" }
         ]
-      },{
+      },
+      {
         "id": "4",
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "2019",
         "text": [
-          {"id": "1", "value": "Innocamp To do list", "href": ""},
-          {"id": "2", "value": "Hooks' version", "href": "https://github.com/olena-petenok/innocamp-to-do-list-react-hooks"},
-          {"id": "3", "value": "Classes' version", "href": "https://github.com/olena-petenok/innocamp-to-do-list-react-classes"}
+          { "id": "1", "value": "Innocamp To do list", "href": "" },
+          {
+            "id": "2",
+            "value": "Hooks' version",
+            "href": "https://github.com/olena-petenok/innocamp-to-do-list-react-hooks"
+          },
+          {
+            "id": "3",
+            "value": "Classes' version",
+            "href": "https://github.com/olena-petenok/innocamp-to-do-list-react-classes"
+          }
         ]
-      },{
+      },
+      {
         "id": "5",
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "Tech stack",
         "text": [
-          {"id": "1", "value": "React", "href": ""},
-          {"id": "2", "value": "Webpack, npm", "href": ""},
-          {"id": "3", "value": "SCSS, HTML5", "href": ""}
+          { "id": "1", "value": "React", "href": "" },
+          { "id": "2", "value": "Webpack, npm", "href": "" },
+          { "id": "3", "value": "SCSS, HTML5", "href": "" }
         ]
-      },{
+      },
+      {
         "id": "6",
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "2017",
         "text": [
-          {"id": "1", "value": "unicertifica.com.ua", "href": "http://www.unicertifica.com.ua"},
-          {"id": "2", "value": "UI/UX designed", "href": ""}
+          {
+            "id": "1",
+            "value": "unicertifica.com.ua",
+            "href": "http://www.unicertifica.com.ua"
+          },
+          { "id": "2", "value": "UI/UX designed", "href": "" }
         ]
-      },{
+      },
+      {
         "id": "7",
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "Tech stack",
         "text": [
-          {"id": "1", "value": "HTML5, CSS3, UIkit 2", "href": ""},
-          {"id": "2", "value": "JS, jQuery, Angular 1.X", "href": ""},
-          {"id": "3", "value": "php, MySQL", "href": ""}
+          { "id": "1", "value": "HTML5, CSS3, UIkit 2", "href": "" },
+          { "id": "2", "value": "JS, jQuery, Angular 1.X", "href": "" },
+          { "id": "3", "value": "php, MySQL", "href": "" }
         ]
       }
     ]
-  },{
+  },
+  {
     "id": "3",
     "ukWidth": "1-1 uk-width-1-2@m",
     "title": "Education",
@@ -101,39 +130,75 @@
         "ukWidth": "1-1",
         "subtitle": "October 2019, Innocamp by Innovecs",
         "text": [
-          {"id": "1", "value": "Front-end Training Track", "href": ""},
-          {"id": "2", "value": "Certificate of completion", "href": "../pdf/petenok-olena-innocamp-certificate.pdf"}
+          { "id": "1", "value": "Front-end Training Track", "href": "" },
+          {
+            "id": "2",
+            "value": "Certificate of completion",
+            "href": "../pdf/petenok-olena-innocamp-certificate.pdf"
+          }
         ]
-      },{
+      },
+      {
         "id": "2",
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "2018, Master’s Degree",
         "text": [
-          {"id": "1", "value": "System design of Services", "href": ""},
-          {"id": "2", "value": "Diploma with honours", "href": "../pdf/petenok-olena-masters-diploma.pdf"},
-          {"id": "3", "value": "Presentation", "href": "../pdf/petenok-olena-masters-diploma-presentation.pdf"},
-          {"id": "4", "value": "Project", "href": "../pdf/petenok-olena-masters-diploma-project.pdf"}
+          { "id": "1", "value": "System design of Services", "href": "" },
+          {
+            "id": "2",
+            "value": "Diploma with honours",
+            "href": "../pdf/petenok-olena-masters-diploma.pdf"
+          },
+          {
+            "id": "3",
+            "value": "Presentation",
+            "href": "../pdf/petenok-olena-masters-diploma-presentation.pdf"
+          },
+          {
+            "id": "4",
+            "value": "Project",
+            "href": "../pdf/petenok-olena-masters-diploma-project.pdf"
+          }
         ]
-      },{
+      },
+      {
         "id": "3",
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "2017, Bachelor’s Degree",
         "text": [
-          {"id": "1", "value": "Computer Science", "href": ""},
-          {"id": "2", "value": "Diploma", "href": "../pdf/petenok-olena-bachelors-diploma.pdf"},
-          {"id": "3", "value": "Presentation", "href": "../pdf/petenok-olena-bachelors-diploma-presentation.pdf"},
-          {"id": "4", "value": "Project", "href": "../pdf/petenok-olena-bachelors-diploma-project.pdf"}
+          { "id": "1", "value": "Computer Science", "href": "" },
+          {
+            "id": "2",
+            "value": "Diploma",
+            "href": "../pdf/petenok-olena-bachelors-diploma.pdf"
+          },
+          {
+            "id": "3",
+            "value": "Presentation",
+            "href": "../pdf/petenok-olena-bachelors-diploma-presentation.pdf"
+          },
+          {
+            "id": "4",
+            "value": "Project",
+            "href": "../pdf/petenok-olena-bachelors-diploma-project.pdf"
+          }
         ]
-      },{
+      },
+      {
         "id": "4",
         "ukWidth": "1-1",
         "subtitle": "",
         "text": [
-          {"id": "1", "value": "National Technical University of Ukraine “Igor Sikorsky Kyiv Polytechnic Institute”, System Design Department of the Educational-Scientific Complex “Institute for Applied System Analysis”", "href": ""}
+          {
+            "id": "1",
+            "value": "National Technical University of Ukraine “Igor Sikorsky Kyiv Polytechnic Institute”, System Design Department of the Educational-Scientific Complex “Institute for Applied System Analysis”",
+            "href": ""
+          }
         ]
       }
     ]
-  },{
+  },
+  {
     "id": "4",
     "ukWidth": "1-1 uk-width-1-2@m",
     "title": "Languages",
@@ -143,19 +208,25 @@
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "English: B2",
         "text": [
-          {"id": "1", "value": "2016, IELTS (Academic)", "href": "../pdf/petenok-olena-ielts.pdf"}
+          {
+            "id": "1",
+            "value": "2016, IELTS (Academic)",
+            "href": "../pdf/petenok-olena-ielts.pdf"
+          }
         ]
-      },{
+      },
+      {
         "id": "2",
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "Native speaker",
         "text": [
-          {"id": "1", "value": "Ukrainian", "href": ""},
-          {"id": "2", "value": "Russian", "href": ""}
+          { "id": "1", "value": "Ukrainian", "href": "" },
+          { "id": "2", "value": "Russian", "href": "" }
         ]
       }
     ]
-  },{
+  },
+  {
     "id": "5",
     "ukWidth": "1-1 uk-width-1-2@m",
     "title": "Extra skills",
@@ -165,14 +236,23 @@
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "Programming",
         "text": [
-          {"id": "1", "value": "Had some experience at the University with: C++, Java, python, C#, php, MongoDB, MySQL", "href": ""}
+          {
+            "id": "1",
+            "value": "Had some experience at the University with: C++, Java, python, C#, php, MongoDB, MySQL",
+            "href": ""
+          }
         ]
-      },{
+      },
+      {
         "id": "2",
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "Project Management",
         "text": [
-          {"id": "1", "value": "Understand the principles of Agile/Scrum development and time management", "href": ""}
+          {
+            "id": "1",
+            "value": "Understand the principles of Agile/Scrum development and time management",
+            "href": ""
+          }
         ]
       }
     ]

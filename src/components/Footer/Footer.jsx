@@ -1,29 +1,35 @@
-import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
+import React, { useContext } from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-import './footer.sass';
-import { footerLanguages, FooterContext } from './FooterContext';
+import "./footer.sass";
+import { footerLanguages, FooterContext } from "./FooterContext";
 
-import DataFooterContacts from '../../constants/json/SharedData/DataFooterContacts.json';
-import { COPYRIGHT } from '../../constants/strings.js';
+import DataFooterContacts from "../../constants/json/SharedData/DataFooterContacts.json";
+import { COPYRIGHT } from "../../constants/strings.js";
 
 function FooterMenuLink(props) {
   return (
     <li className="footer-item text-item-colors-underline">
-      <Link to={props.href} className="text-item-colors-underline-link">{props.value}</Link>
+      <Link to={props.href} className="text-item-colors-underline-link">
+        {props.value}
+      </Link>
     </li>
   );
 }
 
 function FooterCopyright() {
-  return ( <li className="footer-item text-item-colors-underline copyright">&#x24B8; {COPYRIGHT}</li> );
+  return (
+    <li className="footer-item text-item-colors-underline copyright">
+      &#x24B8; {COPYRIGHT}
+    </li>
+  );
 }
 
 function FooterMenuAndCopyright(props) {
-  const links = useContext(FooterContext).links.map(item =>
+  const links = useContext(FooterContext).links.map((item) => (
     <FooterMenuLink key={item.id} href={`/${item.href}`} value={item.value} />
-  );
+  ));
 
   return (
     <ul className="footer-menu-copyright-block">
@@ -36,7 +42,11 @@ function FooterMenuAndCopyright(props) {
 function FooterContactsLink(props) {
   return (
     <li className="footer-item text-item-colors-underline">
-      <a href={props.href} target="_blank" className="text-item-colors-underline-link">
+      <a
+        href={props.href}
+        target="_blank"
+        className="text-item-colors-underline-link"
+      >
         <span className="icon" uk-icon={props.icon}></span>
         {props.value}
       </a>
@@ -54,13 +64,18 @@ function FooterContactsElement(props) {
 }
 
 function FooterContacts(props) {
-  const items = props.contacts.map(item => {
+  const items = props.contacts.map((item) => {
     const { id, value, href, icon } = item;
-    if (href === "") { return ( <FooterContactsElement key={id} icon={icon} value={value} /> ); }
-    else { return ( <FooterContactsLink key={id} href={href} icon={icon} value={value} /> ); }
+    if (href === "") {
+      return <FooterContactsElement key={id} icon={icon} value={value} />;
+    } else {
+      return (
+        <FooterContactsLink key={id} href={href} icon={icon} value={value} />
+      );
+    }
   });
 
-  return ( <ul>{items}</ul> );
+  return <ul>{items}</ul>;
 }
 
 function FooterLogics(props) {
@@ -68,8 +83,12 @@ function FooterLogics(props) {
     <footer className="footer-background">
       <div className="uk-container">
         <div className="uk-grid">
-          <div className="uk-width-1-1 uk-width-1-2@s"><FooterContacts contacts={props.contacts} /></div>
-          <div className="uk-width-1-1 uk-width-1-2@s"><FooterMenuAndCopyright /></div>
+          <div className="uk-width-1-1 uk-width-1-2@s">
+            <FooterContacts contacts={props.contacts} />
+          </div>
+          <div className="uk-width-1-1 uk-width-1-2@s">
+            <FooterMenuAndCopyright />
+          </div>
         </div>
       </div>
     </footer>
@@ -78,20 +97,22 @@ function FooterLogics(props) {
 
 function Footer(props) {
   const languages = {
-    'en': footerLanguages.en,
-    'ua': footerLanguages.ua,
-    'ru': footerLanguages.ru,
-    'default': footerLanguages.en
+    en: footerLanguages.en,
+    ua: footerLanguages.ua,
+    ru: footerLanguages.ru,
+    default: footerLanguages.en,
   };
 
   return (
-    <FooterContext.Provider value={languages[props.language] || languages['default']}>
+    <FooterContext.Provider
+      value={languages[props.language] || languages["default"]}
+    >
       <FooterLogics contacts={DataFooterContacts} />
     </FooterContext.Provider>
   );
 }
 
 Footer.propTypes = { language: PropTypes.string };
-Footer.defaultProps = { language: 'en' };
+Footer.defaultProps = { language: "en" };
 
 export default Footer;

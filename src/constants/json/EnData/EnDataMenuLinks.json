@@ -1,4 +1,4 @@
 [
-  {"id": "1", "href": "", "value": "Home"},
-  {"id": "2", "href": "about-author", "value": "About author"}
+  { "id": "1", "href": "", "value": "Home" },
+  { "id": "2", "href": "about-author", "value": "About author" }
 ]

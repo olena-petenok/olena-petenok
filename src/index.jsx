@@ -1,17 +1,20 @@
-import UIkit from 'uikit';
-import Icons from 'uikit/dist/js/uikit-icons';
+import UIkit from "uikit";
+import Icons from "uikit/dist/js/uikit-icons";
 UIkit.use(Icons); // loads the Icon plugin
-import 'uikit/dist/css/uikit.min.css';
+import "uikit/dist/css/uikit.min.css";
 
-import './styles/style.sass';
+import "./styles/style.sass";
 
-import React from 'react';
-import { render } from 'react-dom';
-import App from './App';
+import React from "react";
+import { render } from "react-dom";
+import App from "./App";
 
-const root = document.createElement('div');
+const root = document.createElement("div");
 document.body.appendChild(root);
-root.style.height = '100%';
+root.style.height = "100%";
 
-function renderApp() { render (<App />, root); }
+function renderApp() {
+  render(<App />, root);
+}
+
 renderApp();
