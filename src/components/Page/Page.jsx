@@ -5,13 +5,13 @@ import Footer from "../Footer/Footer";
 import Index from "../Index/Index";
 import AboutAuthor from "../AboutAuthor/AboutAuthor";
 
+import { indexLanguages, IndexContext } from "../Index/IndexContext";
+
 import DataDocumentTitles from "../../constants/json/SharedData/DataDocumentTitles.json";
 
 const Page = ({ language = "en", page = "index" }) => {
-  const titles = DataDocumentTitles;
-
   useEffect(() => {
-    document.title = `${titles[page][language]}`;
+    document.title = `${DataDocumentTitles[page][language]}`;
   }, [language, page]);
 
   const pages = {
@@ -20,11 +20,13 @@ const Page = ({ language = "en", page = "index" }) => {
   };
 
   return (
-    <>
+    <IndexContext.Provider value={indexLanguages[language]}>
       <Header language={language} page={page} />
+
       {pages[page]}
+
       <Footer language={language} />
-    </>
+    </IndexContext.Provider>
   );
 };
 

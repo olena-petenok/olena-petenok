@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { indexLanguages, IndexContext } from "./IndexContext";
+import { IndexContext } from "./IndexContext";
 
 import "./index.sass";
 
@@ -73,18 +73,4 @@ const IndexLogics = () => {
   ) : null;
 };
 
-const Index = ({ language = "en" }) => {
-  const languages = {
-    en: indexLanguages?.en,
-    ua: indexLanguages?.ua,
-    ru: indexLanguages?.ru,
-  };
-
-  return (
-    <IndexContext.Provider value={languages[language]}>
-      <IndexLogics />
-    </IndexContext.Provider>
-  );
-};
-
-export default Index;
+export default IndexLogics;
