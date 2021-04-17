@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { aboutAuthorLanguages, AboutAuthorContext } from "./AboutAuthorContext";
+import { AboutAuthorContext } from "./AboutAuthorContext";
 
 import PortraitImage from "../../images/about-author/portrait.jpg";
 
@@ -116,10 +116,4 @@ const AboutAuthorLogics = () => {
   );
 };
 
-const AboutAuthor = ({ language = "en" }) => (
-  <AboutAuthorContext.Provider value={aboutAuthorLanguages[language]}>
-    <AboutAuthorLogics />
-  </AboutAuthorContext.Provider>
-);
-
-export default AboutAuthor;
+export default AboutAuthorLogics;
