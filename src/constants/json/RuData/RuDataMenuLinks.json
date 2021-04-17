@@ -1,4 +1,4 @@
 [
-  {"id": "1", "href": "ru", "value": "Главная"},
-  {"id": "2", "href": "about-author/ru", "value": "Об авторе"}
+  { "id": "1", "href": "ru", "value": "Главная" },
+  { "id": "2", "href": "about-author/ru", "value": "Об авторе" }
 ]
