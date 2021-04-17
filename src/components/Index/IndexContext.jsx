@@ -4,6 +4,7 @@ import EnDataIndex from "../../constants/json/EnData/EnDataIndex.json";
 import UaDataIndex from "../../constants/json/UaData/UaDataIndex.json";
 import RuDataIndex from "../../constants/json/RuData/RuDataIndex.json";
 import { indexImages } from "../../constants/indexImages.js";
+
 import { parseIndexJson } from "../../utils/helper.js";
 
 export const indexLanguages = {

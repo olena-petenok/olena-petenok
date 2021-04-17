@@ -1,39 +1,40 @@
 import React, { useEffect } from "react";
-import PropTypes from "prop-types";
 
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Index from "../Index/Index";
 import AboutAuthor from "../AboutAuthor/AboutAuthor";
 
+import { indexLanguages, IndexContext } from "../Index/IndexContext";
+import {
+  aboutAuthorLanguages,
+  AboutAuthorContext,
+} from "../AboutAuthor/AboutAuthorContext";
+
 import DataDocumentTitles from "../../constants/json/SharedData/DataDocumentTitles.json";
 
-function Page(props) {
-  const { language, page } = props;
-  const titles = DataDocumentTitles;
-
+const Page = ({ language = "en", page = "index" }) => {
   useEffect(() => {
-    document.title = `${
-      titles[page][language] || titles["default"]["default"]
-    }`;
+    document.title = `${DataDocumentTitles[page][language]}`;
   }, [language, page]);
 
   const pages = {
     index: <Index language={language} />,
     aboutAuthor: <AboutAuthor language={language} />,
-    default: <Index language={"en"} />,
   };
 
+  // TODO: merge contents into one and make it memorized
   return (
-    <>
-      <Header language={language} page={page} />
-      {pages[page] || pages["default"]}
-      <Footer language={language} />
-    </>
-  );
-}
+    <IndexContext.Provider value={indexLanguages[language]}>
+      <AboutAuthorContext.Provider value={aboutAuthorLanguages[language]}>
+        <Header language={language} page={page} />
 
-Page.propTypes = { language: PropTypes.string, page: PropTypes.string };
-Page.defaultProps = { language: "en", page: "index" };
+        {pages[page]}
+
+        <Footer language={language} />
+      </AboutAuthorContext.Provider>
+    </IndexContext.Provider>
+  );
+};
 
 export default Page;
