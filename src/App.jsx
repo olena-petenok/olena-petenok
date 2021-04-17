@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 
 import Page from "./components/Page/Page";
 
@@ -24,7 +29,7 @@ const App = () => (
         render={() => <Page page={"aboutAuthor"} language={"ru"} />}
       />
 
-      <Route path="*" component={Page} />
+      <Redirect from="*" to={"/"} />
     </Switch>
   </Router>
 );

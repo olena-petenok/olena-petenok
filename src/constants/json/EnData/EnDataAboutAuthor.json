@@ -9,13 +9,31 @@
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "HARD",
         "text": [
-          { "id": "1", "value": "REACT, JS / ES11", "href": "" },
           {
-            "id": "2",
-            "value": "HTML5, CSS3 / SCSS / SASS, UIKIT",
+            "id": "1",
+            "value": "JS (REST APIs, WebSockets), ES2021",
             "href": ""
           },
-          { "id": "3", "value": "Webpack, npm / yarn", "href": "" }
+          {
+            "id": "2",
+            "value": "React (hooks, Redux, Router)",
+            "href": ""
+          },
+          {
+            "id": "3",
+            "value": "SOLID, DRY, KISS principles",
+            "href": ""
+          },
+          {
+            "id": "4",
+            "value": "Adaptive layout, SASS",
+            "href": ""
+          },
+          {
+            "id": "5",
+            "value": "Webpack, npm / yarn",
+            "href": ""
+          }
         ]
       },
       {
@@ -23,9 +41,11 @@
         "ukWidth": "1-1 uk-width-1-2@l",
         "subtitle": "SOFT",
         "text": [
-          { "id": "1", "value": "Critical thinking", "href": "" },
-          { "id": "2", "value": "Independence", "href": "" },
-          { "id": "3", "value": "Open-mindedness", "href": "" }
+          {
+            "id": "1",
+            "value": "Critical thinking, independence, open-mindedness. Algorithmic, analytical and problem-solving skills. Application architecture building experience.",
+            "href": ""
+          }
         ]
       }
     ]
