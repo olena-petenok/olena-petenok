@@ -56,6 +56,18 @@
     "title": "Проекты",
     "blocks": [
       {
+        "id": "0",
+        "ukWidth": "1-1 uk-width-1-1@l",
+        "subtitle": "React Front-end разработчик, 2020 - 2021",
+        "text": [
+          {
+            "id": "1",
+            "value": "Должность в BorisDoes (Австралийский рынок труда)",
+            "href": ""
+          }
+        ]
+      },
+      {
         "id": "1",
         "ukWidth": "1-1 uk-width-1-1@l",
         "subtitle": "",

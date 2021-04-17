@@ -43,7 +43,7 @@
         "text": [
           {
             "id": "1",
-            "value": "Critical thinking, independence, open-mindedness. Algorithmic, analytical and problem-solving skills. Application architecture building experience.",
+            "value": "Critical thinking, independence, open-mindedness. Algorithmic, analytical and problem-solving skills. Application architecture design experience.",
             "href": ""
           }
         ]
@@ -55,6 +55,18 @@
     "ukWidth": "1-1 uk-width-1-2@m",
     "title": "Projects",
     "blocks": [
+      {
+        "id": "0",
+        "ukWidth": "1-1 uk-width-1-1@l",
+        "subtitle": "React Front-end Developer, 2020 - 2021",
+        "text": [
+          {
+            "id": "1",
+            "value": "Position at BorisDoes (Australian Work Marketplace)",
+            "href": ""
+          }
+        ]
+      },
       {
         "id": "1",
         "ukWidth": "1-1 uk-width-1-1@l",

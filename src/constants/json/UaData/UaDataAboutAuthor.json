@@ -56,6 +56,18 @@
     "title": "Проекти",
     "blocks": [
       {
+        "id": "0",
+        "ukWidth": "1-1 uk-width-1-1@l",
+        "subtitle": "React Front-end розробник, 2020 - 2021",
+        "text": [
+          {
+            "id": "1",
+            "value": "Посада в BorisDoes (Австралійський ринок праці)",
+            "href": ""
+          }
+        ]
+      },
+      {
         "id": "1",
         "ukWidth": "1-1 uk-width-1-1@l",
         "subtitle": "",
